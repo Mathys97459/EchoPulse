@@ -190,4 +190,3 @@ fetch('../lib/musics.json')
         afficherMusiques(data.musics);
     })
     .catch(error => console.error('Erreur lors du chargement des musiques:', error));
->>>>>>> feature/graphMusique
