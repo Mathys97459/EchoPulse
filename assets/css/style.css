@@ -37,6 +37,25 @@ h6 {
   color: var(--text-transparent);
 }
 
+/* Music Container */
+
+.music-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.music-card img {
+  max-width: 100px;
+}
+.music-card img {
+  max-width: 100px;
+}
+.music-card .play button {
+  border: none;
+}
+
 /* Header */
 
 header {
