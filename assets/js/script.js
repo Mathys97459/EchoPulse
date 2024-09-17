@@ -44,7 +44,7 @@ function afficherMusiques(musiques) {
 }
 
 // Récupérer le fichier JSON et afficher les musiques
-fetch('./musics.json')
+fetch('../lib/musics.json')
     .then(response => response.json())
     .then(data => {
         console.log(data);

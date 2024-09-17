@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Music Visualizer Symmetry</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #282c34;
+        margin: 0;
+      }
+      .wrapper {
+        text-align: center;
+      }
+      canvas {
+        border: 1px solid #ddd;
+        display: block;
+        margin: 20px auto;
+        background-color: #002D3C;
+      }
+      audio {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 style="color: #fff;">Music Visualizer (Horizontal Symmetry)</h1>
+      <canvas id="visualizer" width="640" height="300"></canvas>
+      <audio id="audioPlayer" controls>
+        <source src="./musics/mp3/BobMarley-CouldYouBeLoved.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <script>
+      // Set up audio context and visualizer
+      const audioPlayer = document.getElementById('audioPlayer');
+      const canvas = document.getElementById('visualizer');
+      const canvasCtx = canvas.getContext('2d');
+
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const analyser = audioCtx.createAnalyser();
+
+      analyser.fftSize = 256;
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+
+      const source = audioCtx.createMediaElementSource(audioPlayer);
+      source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+
+      // Visualizer function
+      function visualize() {
+        canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Get frequency data
+        analyser.getByteFrequencyData(dataArray);
+
+        // Set up drawing parameters
+        const barWidth = (canvas.width / bufferLength) * 2.5;
+        let barHeight;
+        let x = 0;
+
+        // Set the middle of the canvas as the reference point for symmetry
+        const midY = canvas.height / 2;
+
+        for (let i = 0; i < bufferLength; i++) {
+          barHeight = dataArray[i];
+
+          // Set color based on the frequency
+          const color = 'rgb(' + (barHeight + 100) + ',50,50)';
+
+          // Draw bars upwards from the middle
+          canvasCtx.fillStyle = color;
+          canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
+
+          // Draw bars downwards from the middle
+          canvasCtx.fillStyle = color;
+          canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
+
+          // Move to the next bar
+          x += barWidth + 1;
+        }
+
+        // Loop the visualization
+        requestAnimationFrame(visualize);
+      }
+
+      // Start visualizing when the audio is played
+      audioPlayer.addEventListener('play', function() {
+        audioCtx.resume().then(() => {
+          visualize();
+        });
+      });
+    </script>
+  </body>
+</html>
