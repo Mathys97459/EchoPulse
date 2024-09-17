@@ -217,12 +217,16 @@ footer {
 @media (max-width: 720px) {
   .music-banner-off,
   .music-banner-on {
-    padding: 10px;
+    box-sizing: border-box;
+    height: 100px;
   }
 
   .banner-content {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .banner-content img {
@@ -230,11 +234,15 @@ footer {
   }
 
   h2#banner-title {
-    font-size: 1.2rem;
-    color: red;
+    font-size: 0.9rem;
   }
 
   p#banner-author {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  #visualizer {
+    width: 140px;
+    height: 100px;
   }
 }
