@@ -1,0 +1,81 @@
+/* General Settings */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #060b28;
+  --bg-color-gradient: hsl(231, 74%, 10%);
+  --primary-color: #fa64b2;
+  --secondary-color: #4371c5;
+
+  --text-color: hsl(0, 0%, 100%);
+  --text-transparent: hsl(0, 0%, 50%);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  color: var(--text-color);
+}
+
+h6 {
+  color: var(--text-transparent);
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0 50px 0;
+
+  background: linear-gradient(to bottom, var(--bg-color), rgba(255, 0, 0, 0));
+}
+
+.header img {
+  width: 40px;
+  height: 100%;
+}
+
+/* Header - Mobile */
+
+@media screen and (max-width: 720px) {
+  .header {
+    padding: 10px 0 50px 0;
+  }
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
