@@ -105,7 +105,7 @@ function playState(musique, id) {
         // Connecter la source à l'analyseur et à la sortie audio
         audio.source.connect(analyser);
         analyser.connect(audioCtx.destination);
-        afficherBanniere()
+        afficherBanniere(musique)
         // Visualiser les données
         visualize();
     } else {
@@ -117,7 +117,6 @@ function playState(musique, id) {
             </svg>
         `;
         currentAudio = null; // Réinitialiser l'audio en cours
-        cacherBanniere();
     }
 }
 
@@ -133,17 +132,11 @@ function afficherBanniere(musique) {
     banner.classList.remove("music-banner-off");
   
     img.src = musique.pathImg;
+    img.width = "100"
     title.innerText = musique.title;
     author.innerText = musique.author;
   }
   
-  // Fonction pour cacher la bannière
-  function cacherBanniere() {
-    const banner = document.getElementById("musicBanner");
-  
-    banner.classList.remove("music-banner-on");
-    banner.classList.add("music-banner-off");
-  }
 
 // Fonction pour visualiser les données
 function visualize() {

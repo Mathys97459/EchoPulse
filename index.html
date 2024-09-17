@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crazy Dev</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="header">
-      <img
-        src="assets/img/logo-echopulse.png"
-        alt="Logo Echo Pulse"
-        class="logo"
-      />
-      <h1>Echo Pulse</h1>
+        <img src="assets/img/logo-echopulse.png" alt="Logo Echo Pulse" class="logo" />
+        <h1>Echo Pulse</h1>
     </header>
     <div class="music-container" id="musicContainer"></div>
 
-    <div class="vizualisator">
-        <canvas class="canvasVizualisator" id="visualizer"></canvas>
-    </div>
+
     <div id="musicBanner" class="music-banner-off">
         <div class="banner-content">
-          <img id="banner-img" src="" alt="" />
-          <h2 id="banner-title">Titre de la musique</h2>
-          <p id="banner-author">Auteur</p>
+            <img id="banner-img" src="" alt="" />
+            <div>
+                <h2 id="banner-title">Titre de la musique</h2>
+                <p id="banner-author">Auteur</p>
+            </div>
         </div>
-      </div>
+        <div class="banner-stats">
+            <div class="vizualisator">
+                <canvas class="canvasVizualisator" id="visualizer"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
     <footer>
-      <h6>&copy;2024 Echo Pulse. All rights reserved.</h6>
+        <h6>&copy;2024 Echo Pulse. All rights reserved.</h6>
     </footer>
     <script src="assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>

@@ -180,3 +180,8 @@ footer {
   align-items: center;
   padding: 20px;
 }
+.banner-content{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
