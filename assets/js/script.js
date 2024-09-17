@@ -65,7 +65,7 @@ function playState(musique, id) {
     // Si un autre audio est en cours de lecture, mettre en pause
     if (currentAudio && currentAudio !== audio) {
         currentAudio.pause();
-        currentAudio.currentTime = 0;
+        currentAudio.currentTime = 0
         document.getElementById(`play-${currentAudio.id.split('-')[1]}`).innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16">
                 <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
@@ -75,6 +75,7 @@ function playState(musique, id) {
 
     // Vérifier si l'audio en question est en pause ou non
     if (audio.paused) {
+        // Si c'est un nouvel audio, ou si la musique a été mise en pause, démarrer ou reprendre
         audio.play();
         playButton.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-pause-fill" viewBox="0 0 16 16">
@@ -88,8 +89,12 @@ function playState(musique, id) {
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         }
 
-        // Créer une source MediaElementSource et un analyseur
-        const source = audioCtx.createMediaElementSource(audio);
+        // Vérifier si une source MediaElementSource a déjà été créée pour cet audio
+        if (!audio.source) {
+            audio.source = audioCtx.createMediaElementSource(audio);
+        }
+
+        // Créer un analyseur seulement si nécessaire
         if (!analyser) {
             analyser = audioCtx.createAnalyser();
             analyser.fftSize = 512;
@@ -98,12 +103,13 @@ function playState(musique, id) {
         }
 
         // Connecter la source à l'analyseur et à la sortie audio
-        source.connect(analyser);
+        audio.source.connect(analyser);
         analyser.connect(audioCtx.destination);
-
+        afficherBanniere()
         // Visualiser les données
         visualize();
     } else {
+        // Si l'audio est en cours de lecture, le mettre en pause
         audio.pause();
         playButton.innerHTML = `
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16">
@@ -111,8 +117,33 @@ function playState(musique, id) {
             </svg>
         `;
         currentAudio = null; // Réinitialiser l'audio en cours
+        cacherBanniere();
     }
 }
+
+// Fonction pour afficher la bannière avec les informations de la musique
+function afficherBanniere(musique) {
+    console.log("afficher banniere " + musique.author);
+    const banner = document.getElementById("musicBanner");
+    const img = document.getElementById("banner-img");
+    const title = document.getElementById("banner-title");
+    const author = document.getElementById("banner-author");
+  
+    banner.classList.add("music-banner-on");
+    banner.classList.remove("music-banner-off");
+  
+    img.src = musique.pathImg;
+    title.innerText = musique.title;
+    author.innerText = musique.author;
+  }
+  
+  // Fonction pour cacher la bannière
+  function cacherBanniere() {
+    const banner = document.getElementById("musicBanner");
+  
+    banner.classList.remove("music-banner-on");
+    banner.classList.add("music-banner-off");
+  }
 
 // Fonction pour visualiser les données
 function visualize() {
@@ -127,13 +158,13 @@ function visualize() {
     const midY = canvas.height / 2; // Milieu du canvas
 
     for (let i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i] / 3;
+        barHeight = dataArray[i]/3;
 
-        if (!barHeight) {
+        if(!barHeight) {
             barHeight = 3;
         }
 
-        const color = `rgb(${barHeight + 100},50,50)`;
+        const color = 'rgb(' + (barHeight + 100) + ',50,50)';
 
         // Dessiner les barres vers le haut à partir du milieu
         canvasCtx.fillStyle = color;
@@ -149,6 +180,7 @@ function visualize() {
     if (currentAudio && !currentAudio.paused) {
         requestAnimationFrame(visualize);
     }
+    
 }
 
 // Récupérer le fichier JSON et afficher les musiques
@@ -158,3 +190,4 @@ fetch('../lib/musics.json')
         afficherMusiques(data.musics);
     })
     .catch(error => console.error('Erreur lors du chargement des musiques:', error));
+>>>>>>> feature/graphMusique
