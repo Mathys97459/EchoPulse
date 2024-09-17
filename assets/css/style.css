@@ -141,3 +141,31 @@ footer {
     background-color: var(--bg-color);
   }
 }
+
+/* Music Banner */
+
+.music-banner-off {
+  position: fixed;
+  top: -100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.music-banner-on {
+  position: fixed;
+  top: 80vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
