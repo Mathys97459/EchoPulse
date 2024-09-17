@@ -1,6 +1,7 @@
 {
     "musics": [
         {
+            "id": 0,
             "title": "Could You Be Loved",
             "author": "Bob Marley",
             "album" : "Uprising",
@@ -9,6 +10,7 @@
             "pathImg" : "./assets/img/BobMarley-Uprising.jpg"
         },
         {
+            "id": 1,
             "title": "Paradise",
             "author": "Coldplay",
             "album" : "Mylo Xyloto",
@@ -17,6 +19,7 @@
             "pathImg" : "./assets/img/Coldplay-MyloXyloto.jpg"
         },
         {
+            "id": 2,
             "title": "Old Town Road",
             "author": "Lil Nas X",
             "album" : "7 EP",
@@ -25,6 +28,7 @@
             "pathImg" : "./assets/img/LilNasX-7EP.jpg"
         },
         {
+            "id": 3,
             "title": "My Type",
             "author": "Saint Motel",
             "album" : "My Type EP",
@@ -33,6 +37,7 @@
             "pathImg" : "./assets/img/SaintMotel-MyTypeEP.jpg"
         },
         {
+            "id": 4,
             "title": "Chandelier",
             "author": "Sia",
             "album" : "1000 Forms of Fear",
@@ -41,6 +46,7 @@
             "pathImg" : "./assets/img/Sia-1000FormsOfFear.jpg"
         },
         {
+            "id": 5,
             "title": "Goosebumps",
             "author": "Travis Scott",
             "album" : "Birds in the Trap Sing McKnight",
