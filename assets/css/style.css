@@ -12,7 +12,7 @@
   --nav-bg-color: #151c42;
   --bg-color-gradient: hsl(231, 74%, 10%);
   --primary-color: #fa64b2;
-  --secondary-color: #4371c5;
+  --secondary-color: #36abff;
 
   --text-color: hsl(0, 0%, 100%);
   --text-transparent: hsl(0, 0%, 70%);
@@ -392,21 +392,34 @@ li {
 }
 
 .nav__link.active a .bx-home-alt-2 {
-  color: var(--primary-color);
-  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color),
-    0 0 45px var(--primary-color), 0 0 60px var(--primary-color);
-}
-
-.nav__link:nth-child(1).active ~ .nav__light {
-  background-color: var(--primary-color);
-}
-
-.nav__link.active a .bx-heart {
   color: var(--secondary-color);
   text-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color),
     0 0 45px var(--secondary-color), 0 0 60px var(--secondary-color);
 }
 
-.nav__link:nth-child(2).active ~ .nav__light {
+.nav__link:nth-child(1).active ~ .nav__light {
   background-color: var(--secondary-color);
+}
+
+.nav__link.active a .bx-heart {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color),
+    0 0 45px var(--primary-color), 0 0 60px var(--primary-color);
+}
+
+.nav__link:nth-child(2).active ~ .nav__light {
+  background-color: var(--primary-color);
+}
+
+button.banner-next,
+button.banner-play,
+button.banner-previous {
+  background-color: transparent;
+  border: none;
+}
+
+svg#play-btn,
+svg#next-btn,
+svg#prev-btn {
+  width: 10px;
 }
