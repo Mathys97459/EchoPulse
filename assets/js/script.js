@@ -35,7 +35,7 @@ function afficherMusiques(musiques) {
   musiques.forEach((musique) => {
     // Création de l'élément pour chaque carte de musique
     const musicCard = document.createElement("div");
-    musicCard.classList.add("music-card");
+    musicCard.classList.add("music-card"); // Ceci applique la classe pour le CSS
     musicCard.classList.add("music-" + musique.id);
 
     // Ajout de l'image de l'album
@@ -48,9 +48,9 @@ function afficherMusiques(musiques) {
     const infoDiv = document.createElement("div");
     infoDiv.classList.add("music-info");
     infoDiv.innerHTML = `
-        <h3>${musique.title}</h3>
-        <p>${musique.author}</p>
-        `;
+          <h3>${musique.title}</h3>
+          <p>${musique.author}</p>
+          `;
     musicCard.appendChild(infoDiv);
 
     // Ajout de l'audio
@@ -62,6 +62,7 @@ function afficherMusiques(musiques) {
     musicCard.appendChild(audio);
 
     musicContainer.appendChild(musicCard);
+
     // Ajouter l'événement de clic au bouton de lecture
     musicCard.addEventListener("click", () =>
       afficherBanniere(musiques, musique, musique.id)
