@@ -321,8 +321,7 @@ footer {
   }
 
   #visualizer {
-    width: 140px;
-    height: 100px;
+    display: none;
   }
 }
 
@@ -432,10 +431,32 @@ button.banner-previous {
   border: none;
 }
 
+.banner-btn {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px !important;
+  padding-right: 80px;
+}
+
+@media screen and (max-width: 720px) {
+  .banner-btn {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px !important;
+    padding-right: 0;
+  }
+}
+
 svg#play-btn,
 svg#next-btn,
 svg#prev-btn {
-  width: 10px;
+  width: 13px;
 }
 .hidden{
   display: none;
