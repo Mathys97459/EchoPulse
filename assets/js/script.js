@@ -52,6 +52,18 @@ function afficherMusiques(musiques) {
         `;
     musicCard.appendChild(infoDiv);
 
+        // Ajout du bouton de lecture
+        const playDiv = document.createElement("div");
+        playDiv.classList.add("play");
+        playDiv.innerHTML = `
+        <button id="play-${musique.id}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16">
+                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+            </svg>
+        </button>
+        `;
+        musicCard.appendChild(playDiv);
+
         // Ajout de l'audio
         const audio = document.createElement("audio");
         audio.id = `audio-${musique.id}`;
@@ -79,11 +91,24 @@ function afficherMusiques(musiques) {
   });
 }
 
+
 function playState(musiques, musique, id) {
     console.log("Play state id musique : " + id);
     const btn = document.getElementById('play-' + id);
     const audio = document.getElementById(`audio-${id}`);
 
+    // Si un autre audio est en cours de lecture, mettre en pause
+    if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        document.getElementById(
+            `play-${currentAudio.id.split("-")[1]}`
+        ).innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16">
+                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+            </svg>
+        `;
+    }
     // Si un autre audio est en cours de lecture, mettre en pause
     if (currentAudio && currentAudio !== audio) {
         currentAudio.pause();
@@ -123,19 +148,35 @@ function playState(musiques, musique, id) {
                 audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             }
 
-        // Vérifier si une source MediaElementSource a déjà été créée pour cet audio
-        if (!audio.source) {
-            audio.source = audioCtx.createMediaElementSource(audio);
-        }
+            // Vérifier si une source MediaElementSource a déjà été créée pour cet audio
+            if (!audio.source) {
+                audio.source = audioCtx.createMediaElementSource(audio);
+            }
 
-        // Créer un analyseur seulement si nécessaire
-        if (!analyser) {
-            analyser = audioCtx.createAnalyser();
-            analyser.fftSize = 512;
-            bufferLength = analyser.frequencyBinCount;
-            dataArray = new Uint8Array(bufferLength);
-        }
+            // Créer un analyseur seulement si nécessaire
+            if (!analyser) {
+                analyser = audioCtx.createAnalyser();
+                analyser.fftSize = 512;
+                bufferLength = analyser.frequencyBinCount;
+                dataArray = new Uint8Array(bufferLength);
+            }
 
+            // Connecter la source à l'analyseur et à la sortie audio
+            audio.source.connect(analyser);
+            analyser.connect(audioCtx.destination);
+            afficherBanniere(musique);
+            // Visualiser les données
+            frequenciesVisualizer();
+        } else {
+            // Si l'audio est en cours de lecture, le mettre en pause
+            audio.pause();
+            playButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16">
+                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+            </svg>
+        `;
+            currentAudio = null; // Réinitialiser l'audio en cours
+        }
         // Connecter la source à l'analyseur et à la sortie audio
         audio.source.connect(analyser);
         analyser.connect(audioCtx.destination);
@@ -151,7 +192,7 @@ function playState(musiques, musique, id) {
 }
 }
 
-// Fonction pour afficher la bannière avec les informations de la musique
+
 function afficherBanniere(musiques, musique) {
     console.log("Afficher banniere id musique : " + musique.id);
     const banner = document.getElementById("musicBanner");
@@ -163,6 +204,10 @@ function afficherBanniere(musiques, musique) {
     banner.classList.remove("music-banner-off");
     banner.classList.add("music-banner-on");
 
+    img.src = musique.pathImg;
+    img.width = "100";
+    title.innerText = musique.title;
+    author.innerText = musique.author;
     img.src = musique.pathImg;
     img.width = "100";
     title.innerText = musique.title;
