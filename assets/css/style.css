@@ -135,13 +135,7 @@ header {
 /* Footer */
 
 footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin-top: 50px;
-  padding: 10px 0;
+  display: none;
 }
 
 @media screen and (max-width: 720px) {
@@ -149,6 +143,7 @@ footer {
     display: none;
   }
 }
+
 /* Music Container */
 
 .music-card {
@@ -158,6 +153,12 @@ footer {
   align-content: center;
   align-items: center;
   padding: 20px 200px;
+}
+
+@media screen and (min-width: 721px) {
+  .music-card:last-child {
+    margin-bottom: 100px;
+  }
 }
 
 .music-card img {
@@ -235,23 +236,24 @@ footer {
     opacity: 0;
   }
   to {
-    bottom: 0;
+    bottom: 4em;
     opacity: 1;
   }
 }
 
 .music-banner-on {
   position: fixed;
-  bottom: 0;
+  bottom: 4em;
   width: 100%;
   background-color: rgba(14, 21, 57, 0.8);
   color: var(--text-color);
-  font-family: "Poppins", sans-serif;  
+  font-family: "Poppins", sans-serif;
   padding: 0 0 20px 0;
   opacity: 1;
   animation: slideUp 0.5s ease-out;
 }
-.banner{
+
+.banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,7 +272,7 @@ footer {
 
 /*PROGRESS BAR*/
 
-.progress-bar{
+.progress-bar {
   content: " ";
   width: 100%;
   height: 3px;
@@ -278,14 +280,18 @@ footer {
   margin-bottom: 20px;
 }
 
-
 @media (max-width: 720px) {
   .music-banner-off,
   .music-banner-on {
     box-sizing: border-box;
-    height: 100px;
+    padding: 0 0 20px 0;
   }
 
+  .banner {
+    height: 2.5em;
+    padding-left: 85px;
+    padding-right: 70px;
+  }
   .banner-content {
     display: flex;
     flex-direction: row;
@@ -321,7 +327,7 @@ li {
 .nav {
   background-color: var(--nav-bg-color);
   width: 100%;
-  height: 5em;
+  height: 4em;
   padding: 0 2em;
   box-shadow: 0 1em 1em rgba(0, 0, 0, 0.2);
   display: flex;
@@ -330,6 +336,7 @@ li {
   bottom: 0;
   left: 0;
   overflow: hidden;
+  z-index: 999;
 }
 
 .nav__links {
@@ -337,6 +344,12 @@ li {
   display: flex;
   justify-content: center;
   gap: 5em;
+}
+
+@media screen and (max-width: 720px) {
+  .nav__links {
+    width: 85%;
+  }
 }
 
 .nav__link a {
@@ -350,12 +363,20 @@ li {
   top: 0;
   background-color: transparent;
   width: 2.3em;
-  height: 0.4em;
+  height: 0.2em;
   border-radius: 2px;
-
+  margin-right: -0.1em;
   display: flex;
   justify-content: center;
   transition: 0.3s ease;
+}
+
+@media screen and (max-width: 720px) {
+  .nav__light {
+    width: 2.5em;
+    margin-left: -0.1em;
+    margin-right: 0;
+  }
 }
 
 .nav__link.active a {

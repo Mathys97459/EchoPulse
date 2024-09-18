@@ -38,20 +38,20 @@ function afficherMusiques(musiques) {
         musicCard.classList.add("music-card");
         musicCard.classList.add("music-" + musique.id);
 
-        // Ajout de l'image de l'album
-        const img = document.createElement("img");
-        img.src = musique.pathImg;
-        img.alt = `Pochette de l'album ${musique.album}`;
-        musicCard.appendChild(img);
+    // Ajout de l'image de l'album
+    const img = document.createElement("img");
+    img.src = musique.pathImg;
+    img.alt = `Pochette de l'album ${musique.album}`;
+    musicCard.appendChild(img);
 
-        // Ajout des informations de la musique
-        const infoDiv = document.createElement("div");
-        infoDiv.classList.add("music-info");
-        infoDiv.innerHTML = `
+    // Ajout des informations de la musique
+    const infoDiv = document.createElement("div");
+    infoDiv.classList.add("music-info");
+    infoDiv.innerHTML = `
             <h3>${musique.title}</h3>
             <p>${musique.author}</p>
         `;
-        musicCard.appendChild(infoDiv);
+    musicCard.appendChild(infoDiv);
 
         // Ajout de l'audio
         const audio = document.createElement("audio");
@@ -61,14 +61,26 @@ function afficherMusiques(musiques) {
         audio.style.display = "none"; // Cacher les éléments audio
         musicCard.appendChild(audio);
 
-        // Ajouter la carte musicale au conteneur
-        musicContainer.appendChild(musicCard);
+    // Ajouter la carte musicale au conteneur
+    musicContainer.appendChild(musicCard);
 
         // Ajouter l'événement de clic au bouton de lecture
         musicCard.addEventListener("click", () =>
             afficherBanniere(musiques, musique, musique.id)
         );
+
+    // Ajout de l'événement 'ended'
+    audio.addEventListener("ended", () => {
+      const nextMusiqueId = parseInt(musique.id) + 1;
+      const nextAudio = document.getElementById(`audio-${nextMusiqueId}`);
+      // Vérifier si l'audio suivant existe
+      if (nextAudio) {
+        playState(musiques[nextMusiqueId], nextMusiqueId); // Passer à l'audio suivant
+      } else {
+        playState(musiques[0], 0);
+      }
     });
+  });
 }
 
 function playState(musiques, musique, id) {
@@ -130,8 +142,8 @@ function afficherBanniere(musiques, musique) {
     const author = document.getElementById("banner-author");
     const bannerBtn = document.querySelector(".banner-btn");
 
-    banner.classList.remove("music-banner-off");
-    banner.classList.add("music-banner-on");
+  banner.classList.remove("music-banner-off");
+  banner.classList.add("music-banner-on");
 
     img.src = musique.pathImg;
     img.width = "100";
@@ -231,76 +243,58 @@ function afficherBanniere(musiques, musique) {
     playState(musiques, musique, musique.id)
 }
 
-
 function updateProgressBar(audio) {
-    const progressBar = document.querySelector('.progress-bar');
+  const progressBar = document.querySelector(".progress-bar");
 
-    if (audio.duration) {
-        const percentage = (audio.currentTime / audio.duration) * 100;
-        progressBar.style.width = percentage + "%";
-    }
+  if (audio.duration) {
+    const percentage = (audio.currentTime / audio.duration) * 100;
+    progressBar.style.width = percentage + "%";
+  }
 }
-
-
 
 // Fonction pour visualiser les données
 function frequenciesVisualizer() {
-    canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Obtenir les données de fréquence
-    analyser.getByteFrequencyData(dataArray);
-    const barWidth = (canvas.width / bufferLength) * 2.5;
-    let barHeight;
-    let x = 0;
+  // Obtenir les données de fréquence
+  analyser.getByteFrequencyData(dataArray);
+  const barWidth = (canvas.width / bufferLength) * 2.5;
+  let barHeight;
+  let x = 0;
 
-    const midY = canvas.height / 2; // Milieu du canvas
+  const midY = canvas.height / 2; // Milieu du canvas
 
-    for (let i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i] / 3;
+  for (let i = 0; i < bufferLength; i++) {
+    barHeight = dataArray[i] / 3;
 
-        if (!barHeight) {
-            barHeight = 3;
-        }
-
-        const color = "#FA64B2";
-
-        // Dessiner les barres vers le haut à partir du milieu
-        canvasCtx.fillStyle = color;
-        canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
-
-        // Dessiner les barres vers le bas à partir du milieu
-        canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
-
-        x += barWidth + 1;
+    if (!barHeight) {
+      barHeight = 3;
     }
 
-    // Boucler la visualisation
-    if (currentAudio && !currentAudio.paused) {
-        requestAnimationFrame(frequenciesVisualizer);
-    }
+    const color = "#FA64B2";
+
+    // Dessiner les barres vers le haut à partir du milieu
+    canvasCtx.fillStyle = color;
+    canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
+
+    // Dessiner les barres vers le bas à partir du milieu
+    canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
+
+    x += barWidth + 1;
+  }
+
+  // Boucler la visualisation
+  if (currentAudio && !currentAudio.paused) {
+    requestAnimationFrame(frequenciesVisualizer);
+  }
 }
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Obtenir l'élément où l'année sera affichée
-    const yearElement = document.getElementById("currentYear");
-
-    // Obtenir l'année en cours
-    const currentYear = new Date().getFullYear();
-
-    // Mettre à jour le contenu de l'élément avec l'année actuelle
-    yearElement.textContent = currentYear;
-});
-
-
 
 // Récupérer le fichier JSON et afficher les musiques
 fetch("../lib/musics.json")
-    .then((response) => response.json())
-    .then((data) => {
-        afficherMusiques(data.musics);
-    })
-    .catch((error) =>
-        console.error("Erreur lors du chargement des musiques:", error)
-    );
+  .then((response) => response.json())
+  .then((data) => {
+    afficherMusiques(data.musics);
+  })
+  .catch((error) =>
+    console.error("Erreur lors du chargement des musiques:", error)
+  );
