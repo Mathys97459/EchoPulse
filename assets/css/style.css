@@ -241,24 +241,6 @@ footer {
   }
 }
 
-.music-banner-off {
-  position: fixed;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
-  border-top: 1px solid #1b2352;
-  bottom: -200px;
-  width: 100%;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  opacity: 0; /* Bannière complètement invisible */
-  transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
 .music-banner-on {
   position: fixed;
   bottom: 4em;

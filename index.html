@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"
-    />
-    <title>Crazy Dev</title>
-    <!-- BOXICONS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <img
-        src="assets/img/logo-echopulse.png"
-        alt="Logo Echo Pulse"
-        class="logo"
-      />
-      <h1>Echo Pulse</h1>
-    </header>
-    <div class="music-container" id="musicContainer"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+  <title>Crazy Dev</title>
+  <!-- BOXICONS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-    <nav class="nav">
-      <ul class="nav__links">
-        <li class="nav__link">
-          <a href="#"><i class="bx bx-home-alt-2"></i></a>
-        </li>
-        <li class="nav__link">
-          <a href="#"><i class="bx bx-heart"></i></a>
-        </li>
+<body>
+  <header class="header">
+    <img src="assets/img/logo-echopulse.png" alt="Logo Echo Pulse" class="logo" />
+    <h1>Echo Pulse</h1>
+  </header>
+  <div class="music-container" id="musicContainer"></div>
 
-        <div class="nav__light"></div>
-      </ul>
-    </nav>
+  <nav class="nav">
+    <ul class="nav__links">
+      <li class="nav__link">
+        <a href="#"><i class="bx bx-home-alt-2"></i></a>
+      </li>
+      <li class="nav__link">
+        <a href="#"><i class="bx bx-heart"></i></a>
+      </li>
 
-    <div id="musicBanner" class="music-banner-off">
-      <div class="progress-bar"></div>
-      <div class="banner">
-        <div class="banner-content">
-          <img id="banner-img" src="" alt="" />
-          <div>
-            <h2 id="banner-title">Titre de la musique</h2>
-            <p id="banner-author">Auteur</p>
-          </div>
+      <div class="nav__light"></div>
+    </ul>
+  </nav>
+
+  <div id="musicBanner" class="music-banner-off">
+    <div class="progress-bar"></div>
+    <div class="banner">
+      <div class="banner-content">
+        <img id="banner-img" src="" alt="" />
+        <div>
+          <h2 id="banner-title">Titre de la musique</h2>
+          <p id="banner-author">Auteur</p>
         </div>
-        <div class="banner-stats">
-          <div class="vizualisator">
-            <canvas class="canvasVizualisator" id="visualizer"></canvas>
-          </div>
+      </div>
+
+      <div class="banner-btn"></div>
+      <div class="banner-stats">
+        <div class="vizualisator">
+          <canvas class="canvasVizualisator" id="visualizer"></canvas>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <h6>
-        &copy;<span id="currentYear"></span> Echo Pulse. All rights reserved.
-      </h6>
-    </footer>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/nav.js"></script>
-  </body>
+  <footer>
+    <h6>
+      &copy;<span id="currentYear"></span> Echo Pulse. All rights reserved.
+    </h6>
+  </footer>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+
 </html>
