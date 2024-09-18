@@ -155,6 +155,10 @@ footer {
   padding: 20px 200px;
 }
 
+.music-card:last-child {
+  margin-bottom: 250px !important;
+}
+
 @media screen and (min-width: 721px) {
   .music-card:last-child {
     margin-bottom: 100px;
@@ -251,6 +255,10 @@ footer {
   padding: 0 0 20px 0;
   opacity: 1;
   animation: slideUp 0.5s ease-out;
+}
+
+.music-banner-off {
+  display: none;
 }
 
 .banner {
