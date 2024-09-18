@@ -78,6 +78,11 @@ footer {
   padding: 10px 0;
 }
 
+@media screen and (max-width: 720px) {
+  footer {
+    display: none;
+  }
+}
 /* Music Container */
 
 .music-card {
@@ -208,6 +213,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-right: 80px;
 }
 
 .banner-content img {

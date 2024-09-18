@@ -183,6 +183,17 @@ function visualize() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Obtenir l'élément où l'année sera affichée
+  const yearElement = document.getElementById("currentYear");
+
+  // Obtenir l'année en cours
+  const currentYear = new Date().getFullYear();
+
+  // Mettre à jour le contenu de l'élément avec l'année actuelle
+  yearElement.textContent = currentYear;
+});
+
 // Récupérer le fichier JSON et afficher les musiques
 fetch("../lib/musics.json")
   .then((response) => response.json())
