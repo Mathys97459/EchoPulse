@@ -7,6 +7,28 @@ let audioCtx = null; // Contexte audio pour le visualiseur
 let analyser = null; // Analyseur pour les données audio
 let dataArray, bufferLength; // Variables pour les données du visualiseur
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+  const body = document.querySelector("body");
+
+  // Appliquer la classe de centrage au chargement
+  header.classList.add("header-loading");
+  body.classList.add("loading");
+
+  setTimeout(() => {
+    // Retirer les classes de chargement après 1 seconde
+    header.classList.remove("header-loading");
+    header.classList.add("loading-complete");
+    body.classList.remove("loading");
+  }, 1000); // 1 seconde d'attente
+});
+
+window.onload = function () {
+  setTimeout(function () {
+    document.querySelector(".navbar").classList.add("active");
+  }, 500); // Délai avant que l'animation commence
+};
+
 // Fonction pour afficher les musiques
 function afficherMusiques(musiques) {
   musiques.forEach((musique) => {
