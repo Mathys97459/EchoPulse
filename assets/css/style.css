@@ -9,6 +9,7 @@
 
 :root {
   --bg-color: #060b28;
+  --nav-bg-color: #151c42;
   --bg-color-gradient: hsl(231, 74%, 10%);
   --primary-color: #fa64b2;
   --secondary-color: #4371c5;
@@ -317,4 +318,74 @@ footer {
     width: 140px;
     height: 100px;
   }
+}
+
+/* ------------ MENU ------------ */
+
+li {
+  display: inline-block;
+}
+
+.nav {
+  background-color: var(--nav-bg-color);
+  width: 100%;
+  height: 5em;
+  padding: 0 2em;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.nav__links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+.nav__link a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.nav__light {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  width: 2.3em;
+  height: 0.4em;
+  border-radius: 2px;
+
+  display: flex;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.nav__link.active a {
+  opacity: 1;
+}
+
+.nav__link.active a .bx-home-alt-2 {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color),
+    0 0 45px var(--primary-color), 0 0 60px var(--primary-color);
+}
+
+.nav__link:nth-child(1).active ~ .nav__light {
+  background-color: var(--primary-color);
+}
+
+.nav__link.active a .bx-heart {
+  color: var(--secondary-color);
+  text-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color),
+    0 0 45px var(--secondary-color), 0 0 60px var(--secondary-color);
+}
+
+.nav__link:nth-child(2).active ~ .nav__light {
+  background-color: var(--secondary-color);
 }
