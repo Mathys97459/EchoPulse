@@ -366,10 +366,14 @@ li {
   }
 }
 
-.nav__link a {
+.nav__link button {
   color: var(--text-color);
   font-size: 1.5rem;
   opacity: 0.5;
+}
+.nav__link button{
+  background-color: transparent;
+  border: none;
 }
 
 .nav__light {
@@ -393,14 +397,24 @@ li {
   }
 }
 
-.nav__link.active a {
+.nav__link.active button {
   opacity: 1;
 }
 
-.nav__link.active a .bx-home-alt-2 {
+.nav__link.active button .bx-home-alt-2 {
   color: var(--secondary-color);
   text-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color),
     0 0 45px var(--secondary-color), 0 0 60px var(--secondary-color);
+}
+
+.nav__link:nth-child(1).active ~ .nav__light {
+  background-color: var(--secondary-color);
+}
+
+.nav__link.active button .bx-heart {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color),
+    0 0 45px var(--primary-color), 0 0 60px var(--primary-color);
 }
 
 .nav__link:nth-child(1).active ~ .nav__light {
@@ -458,4 +472,7 @@ svg#play-btn,
 svg#next-btn,
 svg#prev-btn {
   width: 13px;
+}
+.hidden{
+  display: none;
 }
