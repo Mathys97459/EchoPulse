@@ -30,7 +30,6 @@ window.onload = function () {
     }, 500); // Délai avant que l'animation commence
 };
 
-// Fonction pour afficher les musiques
 function afficherMusiques(musiques) {
     musiques.forEach((musique) => {
         // Création de l'élément pour chaque carte de musique
@@ -38,18 +37,18 @@ function afficherMusiques(musiques) {
         musicCard.classList.add("music-card");
         musicCard.classList.add("music-" + musique.id);
 
-    // Ajout de l'image de l'album
-    const img = document.createElement("img");
-    img.src = musique.pathImg;
-    img.alt = `Pochette de l'album ${musique.album}`;
-    musicCard.appendChild(img);
+        // Ajout de l'image de l'album
+        const img = document.createElement("img");
+        img.src = musique.pathImg;
+        img.alt = `Pochette de l'album ${musique.album}`;
+        musicCard.appendChild(img);
 
-    // Ajout des informations de la musique
-    const infoDiv = document.createElement("div");
-    infoDiv.classList.add("music-info");
-    infoDiv.innerHTML = `
-            <h3>${musique.title}</h3>
-            <p>${musique.author}</p>
+        // Ajout des informations de la musique
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("music-info");
+        infoDiv.innerHTML = `
+        <h3>${musique.title}</h3>
+        <p>${musique.author}</p>
         `;
     musicCard.appendChild(infoDiv);
 
@@ -60,9 +59,6 @@ function afficherMusiques(musiques) {
         audio.controls = false;
         audio.style.display = "none"; // Cacher les éléments audio
         musicCard.appendChild(audio);
-
-    // Ajouter la carte musicale au conteneur
-    musicContainer.appendChild(musicCard);
 
         // Ajouter l'événement de clic au bouton de lecture
         musicCard.addEventListener("click", () =>
@@ -98,13 +94,34 @@ function playState(musiques, musique, id) {
     if (audio.paused) {
         // Si c'est un nouvel audio, ou si la musique a été mise en pause, démarrer ou reprendre
         audio.play();
-        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" /> </svg>';
+        playButton.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
+            </svg>
+        `;
         currentAudio = audio; // Mettre à jour l'audio en cours
-        audio.addEventListener('timeupdate', () => updateProgressBar(audio));
+        console.log(audio.currentTime, audio.duration);
+        if (audio.currentTime >= audio.duration) {
+            id += 1;
+        } else {
+            audio.addEventListener("timeupdate", () => updateProgressBar(audio));
+        }
+
         // Initialiser le contexte audio et le visualiseur pour cette musique
         if (!audioCtx) {
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         }
+        // Vérifier si l'audio en question est en pause ou non
+        if (audio.paused) {
+            // Si c'est un nouvel audio, ou si la musique a été mise en pause, démarrer ou reprendre
+            audio.play();
+            btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" /> </svg>';
+            currentAudio = audio; // Mettre à jour l'audio en cours
+            audio.addEventListener('timeupdate', () => updateProgressBar(audio));
+            // Initialiser le contexte audio et le visualiseur pour cette musique
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
 
         // Vérifier si une source MediaElementSource a déjà été créée pour cet audio
         if (!audio.source) {
@@ -132,6 +149,7 @@ function playState(musiques, musique, id) {
         currentAudio = null; // Réinitialiser l'audio en cours
     }
 }
+}
 
 // Fonction pour afficher la bannière avec les informations de la musique
 function afficherBanniere(musiques, musique) {
@@ -142,8 +160,8 @@ function afficherBanniere(musiques, musique) {
     const author = document.getElementById("banner-author");
     const bannerBtn = document.querySelector(".banner-btn");
 
-  banner.classList.remove("music-banner-off");
-  banner.classList.add("music-banner-on");
+    banner.classList.remove("music-banner-off");
+    banner.classList.add("music-banner-on");
 
     img.src = musique.pathImg;
     img.width = "100";
@@ -244,57 +262,57 @@ function afficherBanniere(musiques, musique) {
 }
 
 function updateProgressBar(audio) {
-  const progressBar = document.querySelector(".progress-bar");
+    const progressBar = document.querySelector(".progress-bar");
 
-  if (audio.duration) {
-    const percentage = (audio.currentTime / audio.duration) * 100;
-    progressBar.style.width = percentage + "%";
-  }
+    if (audio.duration) {
+        const percentage = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = percentage + "%";
+    }
 }
 
 // Fonction pour visualiser les données
 function frequenciesVisualizer() {
-  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+    canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Obtenir les données de fréquence
-  analyser.getByteFrequencyData(dataArray);
-  const barWidth = (canvas.width / bufferLength) * 2.5;
-  let barHeight;
-  let x = 0;
+    // Obtenir les données de fréquence
+    analyser.getByteFrequencyData(dataArray);
+    const barWidth = (canvas.width / bufferLength) * 2.5;
+    let barHeight;
+    let x = 0;
 
-  const midY = canvas.height / 2; // Milieu du canvas
+    const midY = canvas.height / 2; // Milieu du canvas
 
-  for (let i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i] / 3;
+    for (let i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i] / 3;
 
-    if (!barHeight) {
-      barHeight = 3;
+        if (!barHeight) {
+            barHeight = 3;
+        }
+
+        const color = "#FA64B2";
+
+        // Dessiner les barres vers le haut à partir du milieu
+        canvasCtx.fillStyle = color;
+        canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
+
+        // Dessiner les barres vers le bas à partir du milieu
+        canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
+
+        x += barWidth + 1;
     }
 
-    const color = "#FA64B2";
-
-    // Dessiner les barres vers le haut à partir du milieu
-    canvasCtx.fillStyle = color;
-    canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
-
-    // Dessiner les barres vers le bas à partir du milieu
-    canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
-
-    x += barWidth + 1;
-  }
-
-  // Boucler la visualisation
-  if (currentAudio && !currentAudio.paused) {
-    requestAnimationFrame(frequenciesVisualizer);
-  }
+    // Boucler la visualisation
+    if (currentAudio && !currentAudio.paused) {
+        requestAnimationFrame(frequenciesVisualizer);
+    }
 }
 
 // Récupérer le fichier JSON et afficher les musiques
 fetch("../lib/musics.json")
-  .then((response) => response.json())
-  .then((data) => {
-    afficherMusiques(data.musics);
-  })
-  .catch((error) =>
-    console.error("Erreur lors du chargement des musiques:", error)
-  );
+    .then((response) => response.json())
+    .then((data) => {
+        afficherMusiques(data.musics);
+    })
+    .catch((error) =>
+        console.error("Erreur lors du chargement des musiques:", error)
+    );
