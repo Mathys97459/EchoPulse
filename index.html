@@ -15,20 +15,23 @@
     <img src="assets/img/logo-echopulse.png" alt="Logo Echo Pulse" class="logo" />
     <h1>Echo Pulse</h1>
   </header>
-  <div class="music-container" id="musicContainer"></div>
+  
+  <div class="" id="playlists"></div>
+  <div class="" id="musicLike"></div>
 
   <nav class="nav">
     <ul class="nav__links">
-      <li class="nav__link">
-        <a href="#"><i class="bx bx-home-alt-2"></i></a>
-      </li>
-      <li class="nav__link">
-        <a href="#"><i class="bx bx-heart"></i></a>
-      </li>
+        <li class="nav__link">
+            <button onclick="displayPlaylists()"><i class="bx bx-home-alt-2"></i></button>
+        </li>
+        <li class="nav__link">
+            <button onclick="displaySongs()"><i class="bx bx-heart"></i></button>
+        </li>
 
-      <div class="nav__light"></div>
+        <div class="nav__light"></div>
     </ul>
-  </nav>
+</nav>
+
 
   <div id="musicBanner" class="music-banner-off">
     <div class="progress-bar"></div>
