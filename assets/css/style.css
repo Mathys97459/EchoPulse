@@ -395,19 +395,19 @@ li {
 }
 
 .nav__link.active button .bx-home-alt-2 {
-  color: var(--primary-color);
-  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color),
-    0 0 45px var(--primary-color), 0 0 60px var(--primary-color);
-}
-
-.nav__link:nth-child(1).active ~ .nav__light {
-  background-color: var(--primary-color);
-}
-
-.nav__link.active button .bx-heart {
   color: var(--secondary-color);
   text-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color),
     0 0 45px var(--secondary-color), 0 0 60px var(--secondary-color);
+}
+
+.nav__link:nth-child(1).active ~ .nav__light {
+  background-color: var(--secondary-color);
+}
+
+.nav__link.active button .bx-heart {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px var(--primary-color), 0 0 30px var(--primary-color),
+    0 0 45px var(--primary-color), 0 0 60px var(--primary-color);
 }
 
 .nav__link:nth-child(1).active ~ .nav__light {
