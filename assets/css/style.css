@@ -210,13 +210,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
 }
 
 .banner-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-right: 80px;
+}
+
+.banner-content > :nth-child(1) {
+  margin-right: 1rem;
+}
+
+.banner-content > :nth-child(2) {
+  margin-right: 19em;
 }
 
 .banner-content img {
@@ -229,13 +237,13 @@ footer {
   position: relative;
   width: 100%;
   height: 3px;
-  background-color: #fa64b2;
+  background-color: #fa64b175;
 }
 
 .progress-bar {
   height: 100%;
   width: 0;
-  background-color: #007bff;
+  background-color: var(--primary-color);
 }
 
 .progress-dot {
@@ -244,19 +252,10 @@ footer {
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  background-color: #007bff;
-  border: 2px solid #007bff;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 50%;
 }
-
-
-/* .progress-bar {
-  content: " ";
-  width: 100%;
-  height: 3px;
-  background-color: #fa64b2;
-  margin-bottom: 20px;
-} */
 
 @media (max-width: 720px) {
   .music-banner-off,
@@ -267,19 +266,32 @@ footer {
 
   .banner {
     height: 2.5em;
-    padding-left: 175px;
+    padding-top: 25px;
+    padding-left: 110px;
     padding-right: 50px;
   }
+
   .banner-content {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     align-items: center;
     justify-content: flex-start;
   }
 
   .banner-content img {
     width: 50px;
+  }
+
+  .banner-content > :nth-child(1) {
+    margin-right: 1rem;
+  }
+
+  .banner-content > :nth-child(2) {
+    margin-right: 1.5em;
+  }
+
+  .banner-content img {
+    border-radius: 10%;
   }
 
   h2#banner-title {
