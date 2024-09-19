@@ -81,7 +81,7 @@
             "author": "50 Cent",
             "album": "Get Rich or Die Tryin'",
             "year": "2003",
-            "pathMp3": "./assets/music/rap/mp3/50Cent-InDaClub.mp3",
+            "pathMp3": "./assets/music/rap/50Cent-InDaClub.mp3",
             "pathImg": "./assets/img/rap/50Cent-GetRichOrDieTryin.jfif"
           },
           {
@@ -90,7 +90,7 @@
             "author": "Eminem",
             "album": "8 Mile",
             "year": "2002",
-            "pathMp3": "./assets/music/rap/mp3/Eminem-LoseYourself.mp3",
+            "pathMp3": "./assets/music/rap/Eminem-LoseYourself.mp3",
             "pathImg": "./assets/img/rap/Eminem-8Mile.jfif"
           }
         ],
@@ -219,7 +219,7 @@
             "author": "Led Zeppelin",
             "album": "Led Zeppelin IV",
             "year": "1971",
-            "pathMp": "./assets/music/rock/LedZeppelin-StairwayToHeaven.mp3",
+            "pathMp3": "./assets/music/rock/LedZeppelin-StairwayToHeaven.mp3",
             "pathImg": "./assets/img/rock/LedZeppelin-LedZeppelinIV.jpeg"
           },
           {
