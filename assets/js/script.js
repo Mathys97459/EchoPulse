@@ -135,7 +135,7 @@ function displayPlaylistSong(songs, genre) {
 
                     musicLike.appendChild(musicCard);
                     // Ajouter l'événement de clic au bouton de lecture
-                    musicCard.addEventListener("click", () => afficherBanniere(songs, song));
+                    musicCard.addEventListener("click", () => afficherBanniere(playlist, song));
 
                     // Ajout de l'événement 'ended'
                     audio.addEventListener("ended", () => {
@@ -194,7 +194,7 @@ function displaySongs() {
 
                 musicLike.appendChild(musicCard);
                 // Ajouter l'événement de clic au bouton de lecture
-                musicCard.addEventListener("click", () => afficherBanniere(songs, song));
+                musicCard.addEventListener("click", () => afficherBanniere(playlist, song));
 
                 // Ajout de l'événement 'ended'
                 audio.addEventListener("ended", () => {
@@ -265,6 +265,7 @@ function playState(id) {
 }
 
 function afficherBanniere(songs, song) {
+    console.log(songs)
     const banner = document.getElementById("musicBanner");
     const img = document.getElementById("banner-img");
     const title = document.getElementById("banner-title");
@@ -319,21 +320,24 @@ function afficherBanniere(songs, song) {
     bannerBtn.appendChild(btnNext);
 
     // Ajouter l'événement de clic au bouton de lecture
-    btnPlay.addEventListener("click", () => playState(song.id));
+    btnPlay.addEventListener("click", () => {
+        console.log(songs)
+        playState(song.id)});
     btnNext.addEventListener("click", () => {
-        if (songs[song.id + 1]) {
-            afficherBanniere(songs, songs[song.id + 1]);
+        console.log(songs[song.id])
+        if (songs.songs[song.id]) {
+            afficherBanniere(songs, songs.songs[song.id + 1]);
         } else {
-            afficherBanniere(songs, songs[0]);
+            afficherBanniere(songs, songs.songs[0]);
         }
     });
 
     // Ajouter l'événement de clic au bouton de previous
     btnPrevious.addEventListener("click", () => {
-        if (songs[song.id - 1]) {
-            afficherBanniere(songs, songs[song.id - 1]);
+        if (songs.songs[song.id - 1]) {
+            afficherBanniere(songs, songs.songs[song.id - 1]);
         } else {
-            afficherBanniere(songs, songs[songs.length - 1]);
+            afficherBanniere(songs, songs.songs[songs.length - 1]);
         }
     });
 
