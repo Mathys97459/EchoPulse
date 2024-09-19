@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
             musics = data.musics;
             displayPlaylists();
-            displayPlaylistSong('rap')
+            displayPlaylistSong(musics, 'rap')
             
         })
         .catch((error) =>
@@ -77,7 +77,7 @@ function displayPlaylists() {
             playlistLabel.className = "playlist-label";
 
             // Add an event listener to the button
-            button.addEventListener('click', () => displayPlaylistSong(button.value));
+            button.addEventListener('click', () => displayPlaylistSong(songs, button.value));
 
             // Append elements to the div
             playlistLabel.appendChild(button);
@@ -94,7 +94,7 @@ function displayPlaylists() {
 
 
 /* DISPLAY musics */
-function displayPlaylistSong(genre) {
+function displayPlaylistSong(songs, genre) {
     musicLike.innerHTML = "";
     const playlists = musics;
     musicLike.style.display = "block";
