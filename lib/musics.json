@@ -1,58 +1,56 @@
 {
     "musics": [
         {
-            "id": 0,
-            "title": "Could You Be Loved",
-            "author": "Bob Marley",
-            "album" : "Uprising",
-            "year" : "1980",
-            "pathMp3" : "./musics/mp3/BobMarley-CouldYouBeLoved.mp3",
-            "pathImg" : "./assets/img/BobMarley-Uprising.jpg"
+            "rap": {
+                "songs": [],
+                "img": "./assets/img/rap.jpg",
+                "label": "Rap"
+            }
         },
         {
-            "id": 1,
-            "title": "Paradise",
-            "author": "Coldplay",
-            "album" : "Mylo Xyloto",
-            "year" : "2011",
-            "pathMp3" : "./musics/mp3/Coldplay-Paradise.mp3",
-            "pathImg" : "./assets/img/Coldplay-MyloXyloto.jpg"
+            "pop": {
+                "songs": [],
+                "img": "./assets/img/pop.jpg",
+                "label": "Pop"
+            }
         },
         {
-            "id": 2,
-            "title": "Old Town Road",
-            "author": "Lil Nas X",
-            "album" : "7 EP",
-            "year" : "2019",
-            "pathMp3" : "./musics/mp3/LilNasX-OldTownRoad.mp3",
-            "pathImg" : "./assets/img/LilNasX-7EP.jpg"
+            "rock": {
+                "songs": [],
+                "img": "./assets/img/rock.jpg",
+                "label": "Rock"
+            }
         },
         {
-            "id": 3,
-            "title": "My Type",
-            "author": "Saint Motel",
-            "album" : "My Type EP",
-            "year" : "2014",
-            "pathMp3" : "./musics/mp3/SaintMotel-MyType.mp3",
-            "pathImg" : "./assets/img/SaintMotel-MyTypeEP.jpg"
+            "blues": {
+                "songs": [],
+                "img": "./assets/img/blues.jpg",
+                "label": "Blues"
+            }
         },
         {
-            "id": 4,
-            "title": "Chandelier",
-            "author": "Sia",
-            "album" : "1000 Forms of Fear",
-            "year" : "2014",
-            "pathMp3" : "./musics/mp3/Sia-Chandelier.mp3",
-            "pathImg" : "./assets/img/Sia-1000FormsOfFear.jpg"
+            "reggae": {
+                "songs": [
+                    {
+                        "id": 0,
+                        "title": "Could You Be Loved",
+                        "author": "Bob Marley",
+                        "album": "Uprising",
+                        "year": "1980",
+                        "pathMp3": "./musics/mp3/BobMarley-CouldYouBeLoved.mp3",
+                        "pathImg": "./assets/img/BobMarley-Uprising.jpg"
+                    }
+                ],
+                "img": "./assets/img/reggae.jpg",
+                "label": "Reggae"
+            }
         },
         {
-            "id": 5,
-            "title": "Goosebumps",
-            "author": "Travis Scott",
-            "album" : "Birds in the Trap Sing McKnight",
-            "year" : "2016",
-            "pathMp3" : "./musics/mp3/TravisScott-Goosebumps.mp3",
-            "pathImg" : "./assets/img/TravisScott-BirdsInTheTrapSingMcKnight.jpg"
+            "variete": {
+                "songs": [],
+                "img": "./assets/img/variete.jpg",
+                "label": "Variété Française"
+            }
         }
     ]
 }
