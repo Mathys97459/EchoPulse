@@ -219,8 +219,8 @@
             "author": "Led Zeppelin",
             "album": "Led Zeppelin IV",
             "year": "1971",
-            "pathMp": "",
-            "pathImg": ""
+            "pathMp": "./assets/music/rock/LedZeppelin-StairwayToHeaven.mp3",
+            "pathImg": "./assets/img/rock/LedZeppelin-LedZeppelinIV.jpeg"
           },
           {
             "id": 3,
