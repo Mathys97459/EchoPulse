@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((data) => {
             musics = data.musics;
-            displayPlaylists(musics);
             displayPlaylistSongs('rap')
         })
         .catch((error) =>
@@ -306,7 +305,6 @@ function afficherBanniere(songs, song) {
     bannerBtn.appendChild(btnPrevious);
     bannerBtn.appendChild(btnPlay);
     bannerBtn.appendChild(btnNext);
-
     // Ajouter l'événement de clic au bouton de lecture
     btnPlay.addEventListener("click", () => {
         playState(song.id)
@@ -325,29 +323,6 @@ function afficherBanniere(songs, song) {
             afficherBanniere(songs, songs.songs[songs.songs.length - 1]);
         }
     });
-
-  // Ajouter l'événement de clic au bouton de lecture
-  btnPlay.addEventListener("click", () => {
-    console.log(songs);
-    playState(song.id);
-  });
-  btnNext.addEventListener("click", () => {
-    console.log(songs[song.id]);
-    if (songs.songs[song.id]) {
-      afficherBanniere(songs, songs.songs[song.id + 1]);
-    } else {
-      afficherBanniere(songs, songs.songs[0]);
-    }
-  });
-
-  // Ajouter l'événement de clic au bouton de previous
-  btnPrevious.addEventListener("click", () => {
-    if (songs.songs[song.id - 1]) {
-      afficherBanniere(songs, songs.songs[song.id - 1]);
-    } else {
-      afficherBanniere(songs, songs.songs[songs.length - 1]);
-    }
-  });
 
   playState(song.id);
 }
