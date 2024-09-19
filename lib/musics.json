@@ -9,8 +9,8 @@
             "author": "Travis Scott",
             "album": "Astroworld",
             "year": "2018",
-            "pathMp3": "./musics/mp3/TravisScott-SickoMode.mp3",
-            "pathImg": "./assets/img/TravisScott-Astroworld.jpg"
+            "pathMp3": "./assets/music/rap/TravisScott-SickoMode.mp3",
+            "pathImg": "./assets/img/rap/TravisScott-Astroworld.jpg"
           },
           {
             "id": 1,
@@ -18,8 +18,8 @@
             "author": "Drake",
             "album": "Scorpion",
             "year": "2018",
-            "pathMp3": "./musics/mp3/Drake-GodsPlan.mp3",
-            "pathImg": "./assets/img/Drake-Scorpion.jpg"
+            "pathMp3": "./assets/music/rap/Drake-GodsPlan.mp3",
+            "pathImg": "./assets/img/rap/Drake-Scorpion.jpg"
           },
           {
             "id": 2,
@@ -27,8 +27,8 @@
             "author": "Kendrick Lamar",
             "album": "DAMN.",
             "year": "2017",
-            "pathMp3": "./musics/mp3/KendrickLamar-HUMBLE.mp3",
-            "pathImg": "./assets/img/KendrickLamar-DAMN.jpg"
+            "pathMp3": "./assets/music/rap/KendrickLamar-HUMBLE.mp3",
+            "pathImg": "./assets/img/rap/KendrickLamar-DAMN.jpg"
           },
           {
             "id": 3,
@@ -36,8 +36,8 @@
             "author": "DaBaby",
             "album": "Baby on Baby",
             "year": "2019",
-            "pathMp3": "./musics/mp3/DaBaby-Suge.mp3",
-            "pathImg": "./assets/img/DaBaby-BabyOnBaby.jpg"
+            "pathMp3": "./assets/music/rap/DaBaby-Suge.mp3",
+            "pathImg": "./assets/img/rap/DaBaby-BabyOnBaby.jpg"
           },
           {
             "id": 4,
@@ -45,8 +45,8 @@
             "author": "Lil Nas X",
             "album": "7",
             "year": "2019",
-            "pathMp3": "./musics/mp3/LilNasX-OldTownRoad.mp3",
-            "pathImg": "./assets/img/LilNasX-7.jpg"
+            "pathMp3": "./assets/music/rap/LilNasX-OldTownRoad.mp3",
+            "pathImg": "./assets/img/rap/LilNasX-7.jpg"
           },
           {
             "id": 5,
@@ -54,8 +54,8 @@
             "author": "Post Malone",
             "album": "Beerbongs & Bentleys",
             "year": "2018",
-            "pathMp3": "./musics/mp3/PostMalone-Rockstar.mp3",
-            "pathImg": "./assets/img/PostMalone-BeerbongsAndBentleys.jpg"
+            "pathMp3": "./assets/music/rap/PostMalone-Rockstar.mp3",
+            "pathImg": "./assets/img/rap/PostMalone-BeerbongsAndBentleys.jpg"
           },
           {
             "id": 6,
@@ -63,8 +63,8 @@
             "author": "Kendrick Lamar",
             "album": "good kid, m.A.A.d city",
             "year": "2012",
-            "pathMp3": "./musics/mp3/KendrickLamar-MoneyTrees.mp3",
-            "pathImg": "./assets/img/KendrickLamar-goodKidMadCity.jpg"
+            "pathMp3": "./assets/music/rap/KendrickLamar-MoneyTrees.mp3",
+            "pathImg": "./assets/img/rap/KendrickLamar-goodKidMadCity.jpg"
           },
           {
             "id": 7,
@@ -72,8 +72,8 @@
             "author": "The Notorious B.I.G.",
             "album": "Ready to Die",
             "year": "1994",
-            "pathMp3": "./musics/mp3/NotoriousBIG-Juicy.mp3",
-            "pathImg": "./assets/img/NotoriousBIG-ReadyToDie.jpg"
+            "pathMp3": "./assets/music/rap/NotoriousBIG-Juicy.mp3",
+            "pathImg": "./assets/img/rap/NotoriousBIG-ReadyToDie.jpg"
           },
           {
             "id": 8,
@@ -81,8 +81,8 @@
             "author": "50 Cent",
             "album": "Get Rich or Die Tryin'",
             "year": "2003",
-            "pathMp3": "./musics/mp3/50Cent-InDaClub.mp3",
-            "pathImg": "./assets/img/50Cent-GetRichOrDieTryin.jpg"
+            "pathMp3": "./assets/music/rap/mp3/50Cent-InDaClub.mp3",
+            "pathImg": "./assets/img/rap/50Cent-GetRichOrDieTryin.jpg"
           },
           {
             "id": 9,
@@ -90,8 +90,8 @@
             "author": "Eminem",
             "album": "8 Mile",
             "year": "2002",
-            "pathMp3": "./musics/mp3/Eminem-LoseYourself.mp3",
-            "pathImg": "./assets/img/Eminem-8Mile.jpg"
+            "pathMp3": "./assets/music/rap/mp3/Eminem-LoseYourself.mp3",
+            "pathImg": "./assets/img/rap/Eminem-8Mile.jpg"
           }
         ],
         "img": "",
@@ -105,8 +105,8 @@
             "author": "The Weeknd",
             "album": "After Hours",
             "year": "2020",
-            "pathMp3": "./musics/mp3/TheWeeknd-BlindingLights.mp3",
-            "pathImg": "./assets/img/TheWeeknd-AfterHours.jpg"
+            "pathMp3": "./assets/music/pop/TheWeeknd-BlindingLights.mp3",
+            "pathImg": "./assets/img/pop/TheWeeknd-AfterHours.jpg"
           },
           {
             "id": 1,
@@ -114,8 +114,8 @@
             "author": "Harry Styles",
             "album": "Fine Line",
             "year": "2019",
-            "pathMp3": "./musics/mp3/HarryStyles-WatermelonSugar.mp3",
-            "pathImg": "./assets/img/HarryStyles-FineLine.jpg"
+            "pathMp3": "./assets/music/pop/HarryStyles-WatermelonSugar.mp3",
+            "pathImg": "./assets/img/pop/HarryStyles-FineLine.jpg"
           },
           {
             "id": 2,
@@ -123,8 +123,8 @@
             "author": "Dua Lipa",
             "album": "Future Nostalgia",
             "year": "2020",
-            "pathMp3": "./musics/mp3/DuaLipa-Levitating.mp3",
-            "pathImg": "./assets/img/DuaLipa-FutureNostalgia.jpg"
+            "pathMp3": "./assets/music/pop/DuaLipa-Levitating.mp3",
+            "pathImg": "./assets/img/pop/DuaLipa-FutureNostalgia.jpg"
           },
           {
             "id": 3,
@@ -132,8 +132,8 @@
             "author": "Justin Bieber",
             "album": "Justice",
             "year": "2021",
-            "pathMp3": "./musics/mp3/JustinBieber-Peaches.mp3",
-            "pathImg": "./assets/img/JustinBieber-Justice.jpg"
+            "pathMp3": "./assets/music/pop/JustinBieber-Peaches.mp3",
+            "pathImg": "./assets/img/pop/JustinBieber-Justice.jpg"
           },
           {
             "id": 4,
@@ -141,8 +141,8 @@
             "author": "Ariana Grande",
             "album": "Positions",
             "year": "2020",
-            "pathMp3": "./musics/mp3/ArianaGrande-Positions.mp3",
-            "pathImg": "./assets/img/ArianaGrande-Positions.jpg"
+            "pathMp3": "./assets/music/pop/ArianaGrande-Positions.mp3",
+            "pathImg": "./assets/img/pop/ArianaGrande-Positions.jpg"
           },
           {
             "id": 5,
@@ -150,8 +150,8 @@
             "author": "Dua Lipa",
             "album": "Future Nostalgia",
             "year": "2020",
-            "pathMp3": "./musics/mp3/DuaLipa-DontStartNow.mp3",
-            "pathImg": "./assets/img/DuaLipa-FutureNostalgia.jpg"
+            "pathMp3": "./assets/music/pop/DuaLipa-DontStartNow.mp3",
+            "pathImg": "./assets/img/pop/DuaLipa-FutureNostalgia.jpg"
           },
           {
             "id": 6,
@@ -159,8 +159,8 @@
             "author": "Ed Sheeran",
             "album": "÷ (Divide)",
             "year": "2017",
-            "pathMp3": "./musics/mp3/EdSheeran-ShapeOfYou.mp3",
-            "pathImg": "./assets/img/EdSheeran-Divide.jpg"
+            "pathMp3": "./assets/music/pop/EdSheeran-ShapeOfYou.mp3",
+            "pathImg": "./assets/img/pop/EdSheeran-Divide.jpg"
           },
           {
             "id": 7,
@@ -168,8 +168,8 @@
             "author": "Billie Eilish",
             "album": "When We All Fall Asleep, Where Do We Go?",
             "year": "2019",
-            "pathMp3": "./musics/mp3/BillieEilish-BadGuy.mp3",
-            "pathImg": "./assets/img/BillieEilish-WhereDoWeGo.jpg"
+            "pathMp3": "./assets/music/pop/BillieEilish-BadGuy.mp3",
+            "pathImg": "./assets/img/pop/BillieEilish-WhereDoWeGo.jpg"
           },
           {
             "id": 8,
@@ -177,8 +177,8 @@
             "author": "Doja Cat",
             "album": "Hot Pink",
             "year": "2019",
-            "pathMp3": "./musics/mp3/DojaCat-SaySo.mp3",
-            "pathImg": "./assets/img/DojaCat-HotPink.jpg"
+            "pathMp3": "./assets/music/pop/DojaCat-SaySo.mp3",
+            "pathImg": "./assets/img/pop/DojaCat-HotPink.jpg"
           },
           {
             "id": 9,
@@ -186,8 +186,8 @@
             "author": "Tones and I",
             "album": "The Kids Are Coming",
             "year": "2019",
-            "pathMp3": "./musics/mp3/TonesAndI-DanceMonkey.mp3",
-            "pathImg": "./assets/img/TonesAndI-TheKidsAreComing.jpg"
+            "pathMp3": "./assets/music/pop/TonesAndI-DanceMonkey.mp3",
+            "pathImg": "./assets/img/pop/TonesAndI-TheKidsAreComing.jpg"
           }
         ],
         "img": "",
@@ -201,8 +201,8 @@
             "author": "Eagles",
             "album": "Hotel California",
             "year": "1976",
-            "pathMp3": "./musics/mp3/Eagles-HotelCalifornia.mp3",
-            "pathImg": "./assets/img/Eagles-HotelCalifornia.jpg"
+            "pathMp3": "./assets/music/rock/Eagles-HotelCalifornia.mp3",
+            "pathImg": "./assets/img/rock/Eagles-HotelCalifornia.jpg"
           },
           {
             "id": 1,
@@ -210,8 +210,8 @@
             "author": "Queen",
             "album": "A Night at the Opera",
             "year": "1975",
-            "pathMp3": "./musics/mp3/Queen-BohemianRhapsody.mp3",
-            "pathImg": "./assets/img/Queen-ANightAtTheOpera.jpg"
+            "pathMp3": "./assets/music/rock/Queen-BohemianRhapsody.mp3",
+            "pathImg": "./assets/img/rock/Queen-ANightAtTheOpera.jpg"
           },
           {
             "id": 2,
@@ -228,8 +228,8 @@
             "author": "Deep Purple",
             "album": "Machine Head",
             "year": "1972",
-            "pathMp3": "./musics/mp3/DeepPurple-SmokeOnTheWater.mp3",
-            "pathImg": "./assets/img/DeepPurple-MachineHead.jpg"
+            "pathMp3": "./assets/music/rock/DeepPurple-SmokeOnTheWater.mp3",
+            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jpg"
           },
           {
             "id": 4,
@@ -237,8 +237,8 @@
             "author": "Guns N' Roses",
             "album": "Appetite for Destruction",
             "year": "1987",
-            "pathMp3": "./musics/mp3/GunsNRoses-SweetChildOMine.mp3",
-            "pathImg": "./assets/img/GunsNRoses-AppetiteForDestruction.jpg"
+            "pathMp3": "./assets/music/rock/GunsNRoses-SweetChildOMine.mp3",
+            "pathImg": "./assets/img/rock/GunsNRoses-AppetiteForDestruction.jpg"
           },
           {
             "id": 5,
@@ -246,8 +246,8 @@
             "author": "AC/DC",
             "album": "Back in Black",
             "year": "1980",
-            "pathMp3": "./musics/mp3/ACDC-BackInBlack.mp3",
-            "pathImg": "./assets/img/ACDC-BackInBlack.jpg"
+            "pathMp3": "./assets/music/rock/ACDC-BackInBlack.mp3",
+            "pathImg": "./assets/img/rock/ACDC-BackInBlack.jpg"
           },
           {
             "id": 6,
@@ -255,8 +255,8 @@
             "author": "Bruce Springsteen",
             "album": "Born to Run",
             "year": "1975",
-            "pathMp3": "./musics/mp3/BruceSpringsteen-BornToRun.mp3",
-            "pathImg": "./assets/img/BruceSpringsteen-BornToRun.jpg"
+            "pathMp3": "./assets/music/rock/BruceSpringsteen-BornToRun.mp3",
+            "pathImg": "./assets/img/rock/BruceSpringsteen-BornToRun.jpg"
           },
           {
             "id": 7,
@@ -264,8 +264,8 @@
             "author": "Deep Purple",
             "album": "Machine Head",
             "year": "1972",
-            "pathMp3": "./musics/mp3/DeepPurple-SmokeOnTheWater.mp3",
-            "pathImg": "./assets/img/DeepPurple-MachineHead.jpg"
+            "pathMp3": "./assets/music/rock/DeepPurple-SmokeOnTheWater.mp3",
+            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jpg"
           },
           {
             "id": 8,
@@ -273,8 +273,8 @@
             "author": "Oasis",
             "album": "(What's the Story) Morning Glory?",
             "year": "1995",
-            "pathMp3": "./musics/mp3/Oasis-Wonderwall.mp3",
-            "pathImg": "./assets/img/Oasis-MorningGlory.jpg"
+            "pathMp3": "./assets/music/rock/Oasis-Wonderwall.mp3",
+            "pathImg": "./assets/img/rock/Oasis-MorningGlory.jpg"
           },
           {
             "id": 9,
@@ -282,8 +282,8 @@
             "author": "Metallica",
             "album": "Metallica",
             "year": "1991",
-            "pathMp3": "./musics/mp3/Metallica-EnterSandman.mp3",
-            "pathImg": "./assets/img/Metallica-Metallica.jpg"
+            "pathMp3": "./assets/music/rock/Metallica-EnterSandman.mp3",
+            "pathImg": "./assets/img/rock/Metallica-Metallica.jpg"
           }
         ],
         "img": "",
@@ -297,8 +297,8 @@
             "author": "Robert Johnson",
             "album": "King of the Delta Blues",
             "year": "1936",
-            "pathMp3": "./musics/mp3/RobertJohnson-SweetHomeChicago.mp3",
-            "pathImg": "./assets/img/RobertJohnson-KingOfTheDeltaBlues.jpg"
+            "pathMp3": "./assets/music/blues/RobertJohnson-SweetHomeChicago.mp3",
+            "pathImg": "./assets/img/blues/RobertJohnson-KingOfTheDeltaBlues.jpg"
           },
           {
             "id": 2,
@@ -306,8 +306,8 @@
             "author": "B.B. King",
             "album": "Completely Well",
             "year": "1969",
-            "pathMp3": "./musics/mp3/BBKing-TheThrillIsGone.mp3",
-            "pathImg": "./assets/img/BBKing-CompletelyWell.jpg"
+            "pathMp3": "./assets/music/blues/BBKing-TheThrillIsGone.mp3",
+            "pathImg": "./assets/img/blues/BBKing-CompletelyWell.jpg"
           },
           {
             "id": 3,
@@ -315,8 +315,8 @@
             "author": "Muddy Waters",
             "album": "Electric Mud",
             "year": "1968",
-            "pathMp3": "./musics/mp3/MuddyWaters-HoochieCoochieMan.mp3",
-            "pathImg": "./assets/img/MuddyWaters-ElectricMud.jpg"
+            "pathMp3": "./assets/music/blues/MuddyWaters-HoochieCoochieMan.mp3",
+            "pathImg": "./assets/img/blues/MuddyWaters-ElectricMud.jpg"
           },
           {
             "id": 4,
@@ -324,8 +324,8 @@
             "author": "Cream",
             "album": "Disraeli Gears",
             "year": "1967",
-            "pathMp3": "./musics/mp3/Cream-Crossroads.mp3",
-            "pathImg": "./assets/img/Cream-DisraeliGears.jpg"
+            "pathMp3": "./assets/music/blues/Cream-Crossroads.mp3",
+            "pathImg": "./assets/img/blues/Cream-DisraeliGears.jpg"
           },
           {
             "id": 5,
@@ -333,8 +333,8 @@
             "author": "John Lee Hooker",
             "album": "The Definitive Collection",
             "year": "1962",
-            "pathMp3": "./musics/mp3/JohnLeeHooker-BoomBoom.mp3",
-            "pathImg": "./assets/img/JohnLeeHooker-TheDefinitiveCollection.jpg"
+            "pathMp3": "./assets/music/blues/JohnLeeHooker-BoomBoom.mp3",
+            "pathImg": "./assets/img/blues/JohnLeeHooker-TheDefinitiveCollection.jpg"
           },
           {
             "id": 6,
@@ -342,8 +342,8 @@
             "author": "Stevie Ray Vaughan",
             "album": "Texas Flood",
             "year": "1983",
-            "pathMp3": "./musics/mp3/StevieRayVaughan-PrideAndJoy.mp3",
-            "pathImg": "./assets/img/StevieRayVaughan-TexasFlood.jpg"
+            "pathMp3": "./assets/music/blues/StevieRayVaughan-PrideAndJoy.mp3",
+            "pathImg": "./assets/img/blues/StevieRayVaughan-TexasFlood.jpg"
           },
           {
             "id": 7,
@@ -351,8 +351,8 @@
             "author": "B.B. King",
             "album": "Live at the Regal",
             "year": "1965",
-            "pathMp3": "./musics/mp3/BBKing-EveryDayIHaveTheBlues.mp3",
-            "pathImg": "./assets/img/BBKing-LiveAtTheRegal.jpg"
+            "pathMp3": "./assets/music/blues/BBKing-EveryDayIHaveTheBlues.mp3",
+            "pathImg": "./assets/img/blues/BBKing-LiveAtTheRegal.jpg"
           },
           {
             "id": 8,
@@ -360,8 +360,8 @@
             "author": "Willie Dixon",
             "album": "The Best of Willie Dixon",
             "year": "1961",
-            "pathMp3": "./musics/mp3/WillieDixon-LittleRedRooster.mp3",
-            "pathImg": "./assets/img/WillieDixon-TheBestOf.jpg"
+            "pathMp3": "./assets/music/blues/WillieDixon-LittleRedRooster.mp3",
+            "pathImg": "./assets/img/blues/WillieDixon-TheBestOf.jpg"
           },
           {
             "id": 9,
@@ -369,8 +369,8 @@
             "author": "Eric Clapton",
             "album": "From the Cradle",
             "year": "1994",
-            "pathMp3": "./musics/mp3/EricClapton-ImToreDown.mp3",
-            "pathImg": "./assets/img/EricClapton-FromTheCradle.jpg"
+            "pathMp3": "./assets/music/blues/EricClapton-ImToreDown.mp3",
+            "pathImg": "./assets/img/blues/EricClapton-FromTheCradle.jpg"
           },
           {
             "id": 10,
@@ -378,8 +378,8 @@
             "author": "The Allman Brothers Band",
             "album": "Idlewild South",
             "year": "1970",
-            "pathMp3": "./musics/mp3/TheAllmanBrothersBand-StormyMonday.mp3",
-            "pathImg": "./assets/img/TheAllmanBrothersBand-IdlewildSouth.jpg"
+            "pathMp3": "./assets/music/blues/TheAllmanBrothersBand-StormyMonday.mp3",
+            "pathImg": "./assets/img/blues/TheAllmanBrothersBand-IdlewildSouth.jpg"
           }
         ],
         "img": "",
@@ -393,8 +393,8 @@
             "author": "Bob Marley",
             "album": "Uprising",
             "year": "1980",
-            "pathMp3": "./musics/mp3/BobMarley-CouldYouBeLoved.mp3",
-            "pathImg": "./assets/img/BobMarley-Uprising.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-CouldYouBeLoved.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Uprising.jpg"
           },
           {
             "id": 1,
@@ -402,8 +402,8 @@
             "author": "Bob Marley",
             "album": "Live",
             "year": "1975",
-            "pathMp3": "./musics/mp3/BobMarley-NoWomanNoCry.mp3",
-            "pathImg": "./assets/img/BobMarley-Live.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-NoWomanNoCry.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Live.jpg"
           },
           {
             "id": 2,
@@ -411,8 +411,8 @@
             "author": "Bob Marley",
             "album": "Burnin'",
             "year": "1973",
-            "pathMp3": "./musics/mp3/BobMarley-GetUpStandUp.mp3",
-            "pathImg": "./assets/img/BobMarley-Burnin.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-GetUpStandUp.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Burnin.jpg"
           },
           {
             "id": 3,
@@ -420,8 +420,8 @@
             "author": "Bob Marley",
             "album": "Uprising",
             "year": "1980",
-            "pathMp3": "./musics/mp3/BobMarley-RedemptionSong.mp3",
-            "pathImg": "./assets/img/BobMarley-Uprising.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-RedemptionSong.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Uprising.jpg"
           },
           {
             "id": 4,
@@ -429,8 +429,8 @@
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
-            "pathMp3": "./musics/mp3/BobMarley-IsThisLove.mp3",
-            "pathImg": "./assets/img/BobMarley-Exodus.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-IsThisLove.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
           },
           {
             "id": 5,
@@ -438,8 +438,8 @@
             "author": "Bob Marley",
             "album": "Confrontation",
             "year": "1983",
-            "pathMp3": "./musics/mp3/BobMarley-BuffaloSoldier.mp3",
-            "pathImg": "./assets/img/BobMarley-Confrontation.jpg"
+            "pathMp3": "./assets/music/reggage/BobMarley-BuffaloSoldier.mp3",
+            "pathImg": "./assets/img/reggage/BobMarley-Confrontation.jpg"
           },
           {
             "id": 6,
@@ -447,8 +447,8 @@
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
-            "pathMp3": "./musics/mp3/BobMarley-ThreeLittleBirds.mp3",
-            "pathImg": "./assets/img/BobMarley-Exodus.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-ThreeLittleBirds.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
           },
           {
             "id": 7,
@@ -456,8 +456,8 @@
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
-            "pathMp3": "./musics/mp3/BobMarley-OneLove.mp3",
-            "pathImg": "./assets/img/BobMarley-Exodus.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-OneLove.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
           },
           {
             "id": 8,
@@ -465,8 +465,8 @@
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
-            "pathMp3": "./musics/mp3/BobMarley-SatisfyMySoul.mp3",
-            "pathImg": "./assets/img/BobMarley-Exodus.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-SatisfyMySoul.mp3",
+            "pathImg": "./assets/img/reggae/obMarley-Exodus.jpg"
           },
           {
             "id": 9,
@@ -474,8 +474,8 @@
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
-            "pathMp3": "./musics/mp3/BobMarley-Jamming.mp3",
-            "pathImg": "./assets/img/BobMarley-Exodus.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-Jamming.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
           }
         ],
         "img": "",
@@ -489,8 +489,8 @@
             "author": "Édith Piaf",
             "album": "Édith Piaf Volume 1",
             "year": "1947",
-            "pathMp3": "./musics/mp3/EdithPiaf-LaVieEnRose.mp3",
-            "pathImg": "./assets/img/EdithPiaf-LaVieEnRose.jpg"
+            "pathMp3": "./assets/music/variete/EdithPiaf-LaVieEnRose.mp3",
+            "pathImg": "./assets/img/variete/EdithPiaf-LaVieEnRose.jpg"
           },
           {
             "id": 2,
@@ -498,8 +498,8 @@
             "author": "Johnny Hallyday",
             "album": "Je te promets",
             "year": "1986",
-            "pathMp3": "./musics/mp3/JohnnyHallyday-JeTePromets.mp3",
-            "pathImg": "./assets/img/JohnnyHallyday-JeTePromets.jpg"
+            "pathMp3": "./assets/music/variete/JohnnyHallyday-JeTePromets.mp3",
+            "pathImg": "./assets/img/variete/JohnnyHallyday-JeTePromets.jpg"
           },
           {
             "id": 3,
@@ -507,8 +507,8 @@
             "author": "Joe Dassin",
             "album": "Les Champs-Élysées",
             "year": "1969",
-            "pathMp3": "./musics/mp3/JoeDassin-LesChampsElysees.mp3",
-            "pathImg": "./assets/img/JoeDassin-LesChampsElysees.jpg"
+            "pathMp3": "./assets/music/variete/JoeDassin-LesChampsElysees.mp3",
+            "pathImg": "./assets/img/variete/JoeDassin-LesChampsElysees.jpg"
           },
           {
             "id": 4,
@@ -516,8 +516,8 @@
             "author": "Pierre Perret",
             "album": "Pierre Perret",
             "year": "1976",
-            "pathMp3": "./musics/mp3/PierrePerret-Lily.mp3",
-            "pathImg": "./assets/img/PierrePerret-Lily.jpg"
+            "pathMp3": "./assets/music/variete/PierrePerret-Lily.mp3",
+            "pathImg": "./assets/img/variete/PierrePerret-Lily.jpg"
           },
           {
             "id": 5,
@@ -525,8 +525,8 @@
             "author": "Céline Dion",
             "album": "D'eux",
             "year": "1995",
-            "pathMp3": "./musics/mp3/CelineDion-PourQueTuMimesEncore.mp3",
-            "pathImg": "./assets/img/CelineDion-PourQueTuMimesEncore.jpg"
+            "pathMp3": "./assets/music/variete/CelineDion-PourQueTuMimesEncore.mp3",
+            "pathImg": "./assets/img/variete/CelineDion-PourQueTuMimesEncore.jpg"
           },
           {
             "id": 6,
@@ -534,8 +534,8 @@
             "author": "Francis Cabrel",
             "album": "Les Chemins de traverse",
             "year": "1979",
-            "pathMp3": "./musics/mp3/FrancisCabrel-JeLAimeAMour.mp3",
-            "pathImg": "./assets/img/FrancisCabrel-JeLAimeAMour.jpg"
+            "pathMp3": "./assets/music/variete/FrancisCabrel-JeLAimeAMour.mp3",
+            "pathImg": "./assets/img/variete/FrancisCabrel-JeLAimeAMour.jpg"
           },
           {
             "id": 7,
@@ -543,8 +543,8 @@
             "author": "Mylène Farmer",
             "album": "L'instant X",
             "year": "1991",
-            "pathMp3": "./musics/mp3/MyleneFarmer-Desenchantée.mp3",
-            "pathImg": "./assets/img/MyleneFarmer-Desenchantée.jpg"
+            "pathMp3": "./assets/music/variete/MyleneFarmer-Desenchantée.mp3",
+            "pathImg": "./assets/img/variete/MyleneFarmer-Desenchantée.jpg"
           },
           {
             "id": 8,
@@ -552,8 +552,8 @@
             "author": "Nino Ferrer",
             "album": "Nino Ferrer",
             "year": "1975",
-            "pathMp3": "./musics/mp3/NinoFerrer-LeSud.mp3",
-            "pathImg": "./assets/img/NinoFerrer-LeSud.jpg"
+            "pathMp3": "./assets/music/variete/NinoFerrer-LeSud.mp3",
+            "pathImg": "./assets/img/variete/NinoFerrer-LeSud.jpg"
           },
           {
             "id": 9,
@@ -561,8 +561,8 @@
             "author": "Céline Dion",
             "album": "C'est une belle journée",
             "year": "1991",
-            "pathMp3": "./musics/mp3/CelineDion-LAmourExisteEncore.mp3",
-            "pathImg": "./assets/img/CelineDion-LAmourExisteEncore.jpg"
+            "pathMp3": "./assets/music/variete/CelineDion-LAmourExisteEncore.mp3",
+            "pathImg": "./assets/img/variete/CelineDion-LAmourExisteEncore.jpg"
           },
           {
             "id": 10,
@@ -570,8 +570,8 @@
             "author": "Eartha Kitt",
             "album": "La Vie en rose",
             "year": "1950",
-            "pathMp3": "./musics/mp3/EarthaKitt-CestSiBon.mp3",
-            "pathImg": "./assets/img/EarthaKitt-CestSiBon.jpg"
+            "pathMp3": "./assets/music/variete/EarthaKitt-CestSiBon.mp3",
+            "pathImg": "./assets/img/variete/EarthaKitt-CestSiBon.jpg"
           }
         ],
         "img": "",
