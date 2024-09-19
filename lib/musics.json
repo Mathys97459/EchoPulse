@@ -10,7 +10,7 @@
             "album": "Astroworld",
             "year": "2018",
             "pathMp3": "./assets/music/rap/TravisScott-SickoMode.mp3",
-            "pathImg": "./assets/img/rap/TravisScott-Astroworld.jpg"
+            "pathImg": "./assets/img/rap/TravisScott-Astroworld.jfif"
           },
           {
             "id": 1,
@@ -19,7 +19,7 @@
             "album": "Scorpion",
             "year": "2018",
             "pathMp3": "./assets/music/rap/Drake-GodsPlan.mp3",
-            "pathImg": "./assets/img/rap/Drake-Scorpion.jpg"
+            "pathImg": "./assets/img/rap/Drake-Scorpion.jfif"
           },
           {
             "id": 2,
@@ -28,7 +28,7 @@
             "album": "DAMN.",
             "year": "2017",
             "pathMp3": "./assets/music/rap/KendrickLamar-HUMBLE.mp3",
-            "pathImg": "./assets/img/rap/KendrickLamar-DAMN.jpg"
+            "pathImg": "./assets/img/rap/KendrickLamar-DAMN.jfif"
           },
           {
             "id": 3,
@@ -37,7 +37,7 @@
             "album": "Baby on Baby",
             "year": "2019",
             "pathMp3": "./assets/music/rap/DaBaby-Suge.mp3",
-            "pathImg": "./assets/img/rap/DaBaby-BabyOnBaby.jpg"
+            "pathImg": "./assets/img/rap/DaBaby-BabyOnBaby.jfif"
           },
           {
             "id": 4,
@@ -46,7 +46,7 @@
             "album": "7",
             "year": "2019",
             "pathMp3": "./assets/music/rap/LilNasX-OldTownRoad.mp3",
-            "pathImg": "./assets/img/rap/LilNasX-7.jpg"
+            "pathImg": "./assets/img/rap/LilNasX-7.jfif"
           },
           {
             "id": 5,
@@ -55,7 +55,7 @@
             "album": "Beerbongs & Bentleys",
             "year": "2018",
             "pathMp3": "./assets/music/rap/PostMalone-Rockstar.mp3",
-            "pathImg": "./assets/img/rap/PostMalone-BeerbongsAndBentleys.jpg"
+            "pathImg": "./assets/img/rap/PostMalone-BeerbongsAndBentleys.jfif"
           },
           {
             "id": 6,
@@ -64,7 +64,7 @@
             "album": "good kid, m.A.A.d city",
             "year": "2012",
             "pathMp3": "./assets/music/rap/KendrickLamar-MoneyTrees.mp3",
-            "pathImg": "./assets/img/rap/KendrickLamar-goodKidMadCity.jpg"
+            "pathImg": "./assets/img/rap/KendrickLamar-goodKidMadCity.jfif"
           },
           {
             "id": 7,
@@ -73,7 +73,7 @@
             "album": "Ready to Die",
             "year": "1994",
             "pathMp3": "./assets/music/rap/NotoriousBIG-Juicy.mp3",
-            "pathImg": "./assets/img/rap/NotoriousBIG-ReadyToDie.jpg"
+            "pathImg": "./assets/img/rap/NotoriousBIG-ReadyToDie.jfif"
           },
           {
             "id": 8,
@@ -82,7 +82,7 @@
             "album": "Get Rich or Die Tryin'",
             "year": "2003",
             "pathMp3": "./assets/music/rap/mp3/50Cent-InDaClub.mp3",
-            "pathImg": "./assets/img/rap/50Cent-GetRichOrDieTryin.jpg"
+            "pathImg": "./assets/img/rap/50Cent-GetRichOrDieTryin.jfif"
           },
           {
             "id": 9,
@@ -91,7 +91,7 @@
             "album": "8 Mile",
             "year": "2002",
             "pathMp3": "./assets/music/rap/mp3/Eminem-LoseYourself.mp3",
-            "pathImg": "./assets/img/rap/Eminem-8Mile.jpg"
+            "pathImg": "./assets/img/rap/Eminem-8Mile.jfif"
           }
         ],
         "img": "",
@@ -115,7 +115,7 @@
             "album": "Fine Line",
             "year": "2019",
             "pathMp3": "./assets/music/pop/HarryStyles-WatermelonSugar.mp3",
-            "pathImg": "./assets/img/pop/HarryStyles-FineLine.jpg"
+            "pathImg": "./assets/img/pop/HarryStyles-FineLine.jpeg"
           },
           {
             "id": 2,
@@ -133,7 +133,7 @@
             "album": "Justice",
             "year": "2021",
             "pathMp3": "./assets/music/pop/JustinBieber-Peaches.mp3",
-            "pathImg": "./assets/img/pop/JustinBieber-Justice.jpg"
+            "pathImg": "./assets/img/pop/JustinBieber-Justice.jpeg"
           },
           {
             "id": 4,
@@ -142,7 +142,7 @@
             "album": "Positions",
             "year": "2020",
             "pathMp3": "./assets/music/pop/ArianaGrande-Positions.mp3",
-            "pathImg": "./assets/img/pop/ArianaGrande-Positions.jpg"
+            "pathImg": "./assets/img/pop/ArianaGrande-Positions.jpeg"
           },
           {
             "id": 5,
@@ -160,7 +160,7 @@
             "album": "÷ (Divide)",
             "year": "2017",
             "pathMp3": "./assets/music/pop/EdSheeran-ShapeOfYou.mp3",
-            "pathImg": "./assets/img/pop/EdSheeran-Divide.jpg"
+            "pathImg": "./assets/img/pop/EdSheeran-Divide.jpeg"
           },
           {
             "id": 7,
@@ -169,7 +169,7 @@
             "album": "When We All Fall Asleep, Where Do We Go?",
             "year": "2019",
             "pathMp3": "./assets/music/pop/BillieEilish-BadGuy.mp3",
-            "pathImg": "./assets/img/pop/BillieEilish-WhereDoWeGo.jpg"
+            "pathImg": "./assets/img/pop/BillieEilish-WhereDoWeGo.jpeg"
           },
           {
             "id": 8,
@@ -178,7 +178,7 @@
             "album": "Hot Pink",
             "year": "2019",
             "pathMp3": "./assets/music/pop/DojaCat-SaySo.mp3",
-            "pathImg": "./assets/img/pop/DojaCat-HotPink.jpg"
+            "pathImg": "./assets/img/pop/DojaCat-HotPink.jpeg"
           },
           {
             "id": 9,
@@ -187,7 +187,7 @@
             "album": "The Kids Are Coming",
             "year": "2019",
             "pathMp3": "./assets/music/pop/TonesAndI-DanceMonkey.mp3",
-            "pathImg": "./assets/img/pop/TonesAndI-TheKidsAreComing.jpg"
+            "pathImg": "./assets/img/pop/TonesAndI-TheKidsAreComing.jpeg"
           }
         ],
         "img": "",
@@ -202,7 +202,7 @@
             "album": "Hotel California",
             "year": "1976",
             "pathMp3": "./assets/music/rock/Eagles-HotelCalifornia.mp3",
-            "pathImg": "./assets/img/rock/Eagles-HotelCalifornia.jpg"
+            "pathImg": "./assets/img/rock/Eagles-HotelCalifornia.jfif"
           },
           {
             "id": 1,
@@ -211,7 +211,7 @@
             "album": "A Night at the Opera",
             "year": "1975",
             "pathMp3": "./assets/music/rock/Queen-BohemianRhapsody.mp3",
-            "pathImg": "./assets/img/rock/Queen-ANightAtTheOpera.jpg"
+            "pathImg": "./assets/img/rock/Queen-ANightAtTheOpera.jfif"
           },
           {
             "id": 2,
@@ -229,7 +229,7 @@
             "album": "Machine Head",
             "year": "1972",
             "pathMp3": "./assets/music/rock/DeepPurple-SmokeOnTheWater.mp3",
-            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jpg"
+            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jfif"
           },
           {
             "id": 4,
@@ -238,7 +238,7 @@
             "album": "Appetite for Destruction",
             "year": "1987",
             "pathMp3": "./assets/music/rock/GunsNRoses-SweetChildOMine.mp3",
-            "pathImg": "./assets/img/rock/GunsNRoses-AppetiteForDestruction.jpg"
+            "pathImg": "./assets/img/rock/GunsNRoses-AppetiteForDestruction.jfif"
           },
           {
             "id": 5,
@@ -247,7 +247,7 @@
             "album": "Back in Black",
             "year": "1980",
             "pathMp3": "./assets/music/rock/ACDC-BackInBlack.mp3",
-            "pathImg": "./assets/img/rock/ACDC-BackInBlack.jpg"
+            "pathImg": "./assets/img/rock/ACDC-BackInBlack.jfif"
           },
           {
             "id": 6,
@@ -256,7 +256,7 @@
             "album": "Born to Run",
             "year": "1975",
             "pathMp3": "./assets/music/rock/BruceSpringsteen-BornToRun.mp3",
-            "pathImg": "./assets/img/rock/BruceSpringsteen-BornToRun.jpg"
+            "pathImg": "./assets/img/rock/BruceSpringsteen-BornToRun.jfif"
           },
           {
             "id": 7,
@@ -265,7 +265,7 @@
             "album": "Machine Head",
             "year": "1972",
             "pathMp3": "./assets/music/rock/DeepPurple-SmokeOnTheWater.mp3",
-            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jpg"
+            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jfif"
           },
           {
             "id": 8,
@@ -274,7 +274,7 @@
             "album": "(What's the Story) Morning Glory?",
             "year": "1995",
             "pathMp3": "./assets/music/rock/Oasis-Wonderwall.mp3",
-            "pathImg": "./assets/img/rock/Oasis-MorningGlory.jpg"
+            "pathImg": "./assets/img/rock/Oasis-MorningGlory.jfif"
           },
           {
             "id": 9,
@@ -283,7 +283,7 @@
             "album": "Metallica",
             "year": "1991",
             "pathMp3": "./assets/music/rock/Metallica-EnterSandman.mp3",
-            "pathImg": "./assets/img/rock/Metallica-Metallica.jpg"
+            "pathImg": "./assets/img/rock/Metallica-Metallica.jfif"
           }
         ],
         "img": "",
@@ -298,7 +298,7 @@
             "album": "King of the Delta Blues",
             "year": "1936",
             "pathMp3": "./assets/music/blues/RobertJohnson-SweetHomeChicago.mp3",
-            "pathImg": "./assets/img/blues/RobertJohnson-KingOfTheDeltaBlues.jpg"
+            "pathImg": "./assets/img/blues/RobertJohnson-KingOfTheDeltaBlues.jfif"
           },
           {
             "id": 2,
@@ -307,7 +307,7 @@
             "album": "Completely Well",
             "year": "1969",
             "pathMp3": "./assets/music/blues/BBKing-TheThrillIsGone.mp3",
-            "pathImg": "./assets/img/blues/BBKing-CompletelyWell.jpg"
+            "pathImg": "./assets/img/blues/BBKing-CompletelyWell.jfif"
           },
           {
             "id": 3,
@@ -316,7 +316,7 @@
             "album": "Electric Mud",
             "year": "1968",
             "pathMp3": "./assets/music/blues/MuddyWaters-HoochieCoochieMan.mp3",
-            "pathImg": "./assets/img/blues/MuddyWaters-ElectricMud.jpg"
+            "pathImg": "./assets/img/blues/MuddyWaters-ElectricMud.jfif"
           },
           {
             "id": 4,
@@ -325,7 +325,7 @@
             "album": "Disraeli Gears",
             "year": "1967",
             "pathMp3": "./assets/music/blues/Cream-Crossroads.mp3",
-            "pathImg": "./assets/img/blues/Cream-DisraeliGears.jpg"
+            "pathImg": "./assets/img/blues/Cream-DisraeliGears.jfif"
           },
           {
             "id": 5,
@@ -334,7 +334,7 @@
             "album": "The Definitive Collection",
             "year": "1962",
             "pathMp3": "./assets/music/blues/JohnLeeHooker-BoomBoom.mp3",
-            "pathImg": "./assets/img/blues/JohnLeeHooker-TheDefinitiveCollection.jpg"
+            "pathImg": "./assets/img/blues/JohnLeeHooker-TheDefinitiveCollection.jfif"
           },
           {
             "id": 6,
@@ -343,7 +343,7 @@
             "album": "Texas Flood",
             "year": "1983",
             "pathMp3": "./assets/music/blues/StevieRayVaughan-PrideAndJoy.mp3",
-            "pathImg": "./assets/img/blues/StevieRayVaughan-TexasFlood.jpg"
+            "pathImg": "./assets/img/blues/StevieRayVaughan-TexasFlood.jfif"
           },
           {
             "id": 7,
@@ -352,7 +352,7 @@
             "album": "Live at the Regal",
             "year": "1965",
             "pathMp3": "./assets/music/blues/BBKing-EveryDayIHaveTheBlues.mp3",
-            "pathImg": "./assets/img/blues/BBKing-LiveAtTheRegal.jpg"
+            "pathImg": "./assets/img/blues/BBKing-LiveAtTheRegal.jfif"
           },
           {
             "id": 8,
@@ -361,7 +361,7 @@
             "album": "The Best of Willie Dixon",
             "year": "1961",
             "pathMp3": "./assets/music/blues/WillieDixon-LittleRedRooster.mp3",
-            "pathImg": "./assets/img/blues/WillieDixon-TheBestOf.jpg"
+            "pathImg": "./assets/img/blues/WillieDixon-TheBestOf.jfif"
           },
           {
             "id": 9,
@@ -370,7 +370,7 @@
             "album": "From the Cradle",
             "year": "1994",
             "pathMp3": "./assets/music/blues/EricClapton-ImToreDown.mp3",
-            "pathImg": "./assets/img/blues/EricClapton-FromTheCradle.jpg"
+            "pathImg": "./assets/img/blues/EricClapton-FromTheCradle.jfif"
           },
           {
             "id": 10,
@@ -379,7 +379,7 @@
             "album": "Idlewild South",
             "year": "1970",
             "pathMp3": "./assets/music/blues/TheAllmanBrothersBand-StormyMonday.mp3",
-            "pathImg": "./assets/img/blues/TheAllmanBrothersBand-IdlewildSouth.jpg"
+            "pathImg": "./assets/img/blues/TheAllmanBrothersBand-IdlewildSouth.jfif"
           }
         ],
         "img": "",
@@ -403,7 +403,7 @@
             "album": "Live",
             "year": "1975",
             "pathMp3": "./assets/music/reggae/BobMarley-NoWomanNoCry.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Live.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Live.jpeg"
           },
           {
             "id": 2,
@@ -412,7 +412,7 @@
             "album": "Burnin'",
             "year": "1973",
             "pathMp3": "./assets/music/reggae/BobMarley-GetUpStandUp.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Burnin.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Burnin.jpeg"
           },
           {
             "id": 3,
@@ -430,7 +430,7 @@
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-IsThisLove.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
           },
           {
             "id": 5,
@@ -438,8 +438,8 @@
             "author": "Bob Marley",
             "album": "Confrontation",
             "year": "1983",
-            "pathMp3": "./assets/music/reggage/BobMarley-BuffaloSoldier.mp3",
-            "pathImg": "./assets/img/reggage/BobMarley-Confrontation.jpg"
+            "pathMp3": "./assets/music/reggae/BobMarley-BuffaloSoldier.mp3",
+            "pathImg": "./assets/img/reggae/BobMarley-Confrontation.jpeg"
           },
           {
             "id": 6,
@@ -448,7 +448,7 @@
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-ThreeLittleBirds.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
           },
           {
             "id": 7,
@@ -457,7 +457,7 @@
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-OneLove.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
           },
           {
             "id": 8,
@@ -466,7 +466,7 @@
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-SatisfyMySoul.mp3",
-            "pathImg": "./assets/img/reggae/obMarley-Exodus.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
           },
           {
             "id": 9,
@@ -475,7 +475,7 @@
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-Jamming.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
           }
         ],
         "img": "",
@@ -490,7 +490,7 @@
             "album": "Édith Piaf Volume 1",
             "year": "1947",
             "pathMp3": "./assets/music/variete/EdithPiaf-LaVieEnRose.mp3",
-            "pathImg": "./assets/img/variete/EdithPiaf-LaVieEnRose.jpg"
+            "pathImg": "./assets/img/variete/EdithPiaf-LaVieEnRose.jpeg"
           },
           {
             "id": 2,
@@ -499,7 +499,7 @@
             "album": "Je te promets",
             "year": "1986",
             "pathMp3": "./assets/music/variete/JohnnyHallyday-JeTePromets.mp3",
-            "pathImg": "./assets/img/variete/JohnnyHallyday-JeTePromets.jpg"
+            "pathImg": "./assets/img/variete/JohnnyHallyday-JeTePromets.jpeg"
           },
           {
             "id": 3,
@@ -508,7 +508,7 @@
             "album": "Les Champs-Élysées",
             "year": "1969",
             "pathMp3": "./assets/music/variete/JoeDassin-LesChampsElysees.mp3",
-            "pathImg": "./assets/img/variete/JoeDassin-LesChampsElysees.jpg"
+            "pathImg": "./assets/img/variete/JoeDassin-LesChampsElysees.jpeg"
           },
           {
             "id": 4,
@@ -517,7 +517,7 @@
             "album": "Pierre Perret",
             "year": "1976",
             "pathMp3": "./assets/music/variete/PierrePerret-Lily.mp3",
-            "pathImg": "./assets/img/variete/PierrePerret-Lily.jpg"
+            "pathImg": "./assets/img/variete/PierrePerret-Lily.jpeg"
           },
           {
             "id": 5,
@@ -526,7 +526,7 @@
             "album": "D'eux",
             "year": "1995",
             "pathMp3": "./assets/music/variete/CelineDion-PourQueTuMimesEncore.mp3",
-            "pathImg": "./assets/img/variete/CelineDion-PourQueTuMimesEncore.jpg"
+            "pathImg": "./assets/img/variete/CelineDion-PourQueTuMimesEncore.jpeg"
           },
           {
             "id": 6,
@@ -535,7 +535,7 @@
             "album": "Les Chemins de traverse",
             "year": "1979",
             "pathMp3": "./assets/music/variete/FrancisCabrel-JeLAimeAMour.mp3",
-            "pathImg": "./assets/img/variete/FrancisCabrel-JeLAimeAMour.jpg"
+            "pathImg": "./assets/img/variete/FrancisCabrel-JeLAimeAMour.jpeg"
           },
           {
             "id": 7,
@@ -544,7 +544,7 @@
             "album": "L'instant X",
             "year": "1991",
             "pathMp3": "./assets/music/variete/MyleneFarmer-Desenchantée.mp3",
-            "pathImg": "./assets/img/variete/MyleneFarmer-Desenchantée.jpg"
+            "pathImg": "./assets/img/variete/MyleneFarmer-Desenchantée.jpeg"
           },
           {
             "id": 8,
@@ -553,7 +553,7 @@
             "album": "Nino Ferrer",
             "year": "1975",
             "pathMp3": "./assets/music/variete/NinoFerrer-LeSud.mp3",
-            "pathImg": "./assets/img/variete/NinoFerrer-LeSud.jpg"
+            "pathImg": "./assets/img/variete/NinoFerrer-LeSud.jpeg"
           },
           {
             "id": 9,
@@ -562,7 +562,7 @@
             "album": "C'est une belle journée",
             "year": "1991",
             "pathMp3": "./assets/music/variete/CelineDion-LAmourExisteEncore.mp3",
-            "pathImg": "./assets/img/variete/CelineDion-LAmourExisteEncore.jpg"
+            "pathImg": "./assets/img/variete/CelineDion-LAmourExisteEncore.jpeg"
           },
           {
             "id": 10,
@@ -571,7 +571,7 @@
             "album": "La Vie en rose",
             "year": "1950",
             "pathMp3": "./assets/music/variete/EarthaKitt-CestSiBon.mp3",
-            "pathImg": "./assets/img/variete/EarthaKitt-CestSiBon.jpg"
+            "pathImg": "./assets/img/variete/EarthaKitt-CestSiBon.jpeg"
           }
         ],
         "img": "",
