@@ -10,7 +10,9 @@
             "album": "Astroworld",
             "year": "2018",
             "pathMp3": "./assets/music/rap/TravisScott-SickoMode.mp3",
-            "pathImg": "./assets/img/rap/TravisScott-Astroworld.jfif"
+            "pathImg": "./assets/img/rap/TravisScott-Astroworld.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 1,
@@ -19,7 +21,9 @@
             "album": "Scorpion",
             "year": "2018",
             "pathMp3": "./assets/music/rap/Drake-GodsPlan.mp3",
-            "pathImg": "./assets/img/rap/Drake-Scorpion.jfif"
+            "pathImg": "./assets/img/rap/Drake-Scorpion.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 2,
@@ -28,7 +32,9 @@
             "album": "DAMN.",
             "year": "2017",
             "pathMp3": "./assets/music/rap/KendrickLamar-HUMBLE.mp3",
-            "pathImg": "./assets/img/rap/KendrickLamar-DAMN.jfif"
+            "pathImg": "./assets/img/rap/KendrickLamar-DAMN.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 3,
@@ -37,7 +43,9 @@
             "album": "Baby on Baby",
             "year": "2019",
             "pathMp3": "./assets/music/rap/DaBaby-Suge.mp3",
-            "pathImg": "./assets/img/rap/DaBaby-BabyOnBaby.jfif"
+            "pathImg": "./assets/img/rap/DaBaby-BabyOnBaby.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 4,
@@ -46,7 +54,9 @@
             "album": "7",
             "year": "2019",
             "pathMp3": "./assets/music/rap/LilNasX-OldTownRoad.mp3",
-            "pathImg": "./assets/img/rap/LilNasX-7.jfif"
+            "pathImg": "./assets/img/rap/LilNasX-7.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 5,
@@ -55,7 +65,9 @@
             "album": "Beerbongs & Bentleys",
             "year": "2018",
             "pathMp3": "./assets/music/rap/PostMalone-Rockstar.mp3",
-            "pathImg": "./assets/img/rap/PostMalone-BeerbongsAndBentleys.jfif"
+            "pathImg": "./assets/img/rap/PostMalone-BeerbongsAndBentleys.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 6,
@@ -64,7 +76,9 @@
             "album": "good kid, m.A.A.d city",
             "year": "2012",
             "pathMp3": "./assets/music/rap/KendrickLamar-MoneyTrees.mp3",
-            "pathImg": "./assets/img/rap/KendrickLamar-goodKidMadCity.jfif"
+            "pathImg": "./assets/img/rap/KendrickLamar-goodKidMadCity.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 7,
@@ -73,7 +87,9 @@
             "album": "Ready to Die",
             "year": "1994",
             "pathMp3": "./assets/music/rap/NotoriousBIG-Juicy.mp3",
-            "pathImg": "./assets/img/rap/NotoriousBIG-ReadyToDie.jfif"
+            "pathImg": "./assets/img/rap/NotoriousBIG-ReadyToDie.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 8,
@@ -82,7 +98,9 @@
             "album": "Get Rich or Die Tryin'",
             "year": "2003",
             "pathMp3": "./assets/music/rap/mp3/50Cent-InDaClub.mp3",
-            "pathImg": "./assets/img/rap/50Cent-GetRichOrDieTryin.jfif"
+            "pathImg": "./assets/img/rap/50Cent-GetRichOrDieTryin.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
             "id": 9,
@@ -91,7 +109,9 @@
             "album": "8 Mile",
             "year": "2002",
             "pathMp3": "./assets/music/rap/mp3/Eminem-LoseYourself.mp3",
-            "pathImg": "./assets/img/rap/Eminem-8Mile.jfif"
+            "pathImg": "./assets/img/rap/Eminem-8Mile.jfif",
+            "like": false,
+            "likeDate": ""
           }
         ],
         "img": "",
@@ -100,94 +120,114 @@
       "pop": {
         "songs": [
           {
-            "id": 0,
+            "id": 10,
             "title": "Blinding Lights",
             "author": "The Weeknd",
             "album": "After Hours",
             "year": "2020",
             "pathMp3": "./assets/music/pop/TheWeeknd-BlindingLights.mp3",
-            "pathImg": "./assets/img/pop/TheWeeknd-AfterHours.jpg"
+            "pathImg": "./assets/img/pop/TheWeeknd-AfterHours.jpg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 1,
+            "id": 11,
             "title": "Watermelon Sugar",
             "author": "Harry Styles",
             "album": "Fine Line",
             "year": "2019",
             "pathMp3": "./assets/music/pop/HarryStyles-WatermelonSugar.mp3",
-            "pathImg": "./assets/img/pop/HarryStyles-FineLine.jpeg"
+            "pathImg": "./assets/img/pop/HarryStyles-FineLine.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 2,
+            "id": 12,
             "title": "Levitating",
             "author": "Dua Lipa",
             "album": "Future Nostalgia",
             "year": "2020",
             "pathMp3": "./assets/music/pop/DuaLipa-Levitating.mp3",
-            "pathImg": "./assets/img/pop/DuaLipa-FutureNostalgia.jpg"
+            "pathImg": "./assets/img/pop/DuaLipa-FutureNostalgia.jpg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 3,
+            "id": 13,
             "title": "Peaches",
             "author": "Justin Bieber",
             "album": "Justice",
             "year": "2021",
             "pathMp3": "./assets/music/pop/JustinBieber-Peaches.mp3",
-            "pathImg": "./assets/img/pop/JustinBieber-Justice.jpeg"
+            "pathImg": "./assets/img/pop/JustinBieber-Justice.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 4,
+            "id": 14,
             "title": "Positions",
             "author": "Ariana Grande",
             "album": "Positions",
             "year": "2020",
             "pathMp3": "./assets/music/pop/ArianaGrande-Positions.mp3",
-            "pathImg": "./assets/img/pop/ArianaGrande-Positions.jpeg"
+            "pathImg": "./assets/img/pop/ArianaGrande-Positions.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 5,
+            "id": 15,
             "title": "Don't Start Now",
             "author": "Dua Lipa",
             "album": "Future Nostalgia",
             "year": "2020",
             "pathMp3": "./assets/music/pop/DuaLipa-DontStartNow.mp3",
-            "pathImg": "./assets/img/pop/DuaLipa-FutureNostalgia.jpg"
+            "pathImg": "./assets/img/pop/DuaLipa-FutureNostalgia.jpg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 6,
+            "id": 16,
             "title": "Shape of You",
             "author": "Ed Sheeran",
             "album": "÷ (Divide)",
             "year": "2017",
             "pathMp3": "./assets/music/pop/EdSheeran-ShapeOfYou.mp3",
-            "pathImg": "./assets/img/pop/EdSheeran-Divide.jpeg"
+            "pathImg": "./assets/img/pop/EdSheeran-Divide.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 7,
+            "id": 17,
             "title": "Bad Guy",
             "author": "Billie Eilish",
             "album": "When We All Fall Asleep, Where Do We Go?",
             "year": "2019",
             "pathMp3": "./assets/music/pop/BillieEilish-BadGuy.mp3",
-            "pathImg": "./assets/img/pop/BillieEilish-WhereDoWeGo.jpeg"
+            "pathImg": "./assets/img/pop/BillieEilish-WhereDoWeGo.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 8,
+            "id": 18,
             "title": "Say So",
             "author": "Doja Cat",
             "album": "Hot Pink",
             "year": "2019",
             "pathMp3": "./assets/music/pop/DojaCat-SaySo.mp3",
-            "pathImg": "./assets/img/pop/DojaCat-HotPink.jpeg"
+            "pathImg": "./assets/img/pop/DojaCat-HotPink.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 9,
+            "id": 19,
             "title": "Dance Monkey",
             "author": "Tones and I",
             "album": "The Kids Are Coming",
             "year": "2019",
             "pathMp3": "./assets/music/pop/TonesAndI-DanceMonkey.mp3",
-            "pathImg": "./assets/img/pop/TonesAndI-TheKidsAreComing.jpeg"
+            "pathImg": "./assets/img/pop/TonesAndI-TheKidsAreComing.jpeg",
+            "like": false,
+            "likeDate": ""
           }
         ],
         "img": "",
@@ -196,94 +236,114 @@
       "rock": {
         "songs": [
           {
-            "id": 0,
+            "id": 20,
             "title": "Hotel California",
             "author": "Eagles",
             "album": "Hotel California",
             "year": "1976",
             "pathMp3": "./assets/music/rock/Eagles-HotelCalifornia.mp3",
-            "pathImg": "./assets/img/rock/Eagles-HotelCalifornia.jfif"
+            "pathImg": "./assets/img/rock/Eagles-HotelCalifornia.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 1,
+            "id": 21,
             "title": "Bohemian Rhapsody",
             "author": "Queen",
             "album": "A Night at the Opera",
             "year": "1975",
             "pathMp3": "./assets/music/rock/Queen-BohemianRhapsody.mp3",
-            "pathImg": "./assets/img/rock/Queen-ANightAtTheOpera.jfif"
+            "pathImg": "./assets/img/rock/Queen-ANightAtTheOpera.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 2,
+            "id": 22,
             "title": "Stairway to Heaven",
             "author": "Led Zeppelin",
             "album": "Led Zeppelin IV",
             "year": "1971",
             "pathMp": "./assets/music/rock/LedZeppelin-StairwayToHeaven.mp3",
-            "pathImg": "./assets/img/rock/LedZeppelin-LedZeppelinIV.jpeg"
+            "pathImg": "./assets/img/rock/LedZeppelin-LedZeppelinIV.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 3,
+            "id": 23,
             "title": "Smoke on the Water",
             "author": "Deep Purple",
             "album": "Machine Head",
             "year": "1972",
             "pathMp3": "./assets/music/rock/DeepPurple-SmokeOnTheWater.mp3",
-            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jfif"
+            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 4,
+            "id": 24,
             "title": "Sweet Child o' Mine",
             "author": "Guns N' Roses",
             "album": "Appetite for Destruction",
             "year": "1987",
             "pathMp3": "./assets/music/rock/GunsNRoses-SweetChildOMine.mp3",
-            "pathImg": "./assets/img/rock/GunsNRoses-AppetiteForDestruction.jfif"
+            "pathImg": "./assets/img/rock/GunsNRoses-AppetiteForDestruction.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 5,
+            "id": 25,
             "title": "Back in Black",
             "author": "AC/DC",
             "album": "Back in Black",
             "year": "1980",
             "pathMp3": "./assets/music/rock/ACDC-BackInBlack.mp3",
-            "pathImg": "./assets/img/rock/ACDC-BackInBlack.jfif"
+            "pathImg": "./assets/img/rock/ACDC-BackInBlack.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 6,
+            "id": 26,
             "title": "Born to Run",
             "author": "Bruce Springsteen",
             "album": "Born to Run",
             "year": "1975",
             "pathMp3": "./assets/music/rock/BruceSpringsteen-BornToRun.mp3",
-            "pathImg": "./assets/img/rock/BruceSpringsteen-BornToRun.jfif"
+            "pathImg": "./assets/img/rock/BruceSpringsteen-BornToRun.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 7,
+            "id": 27,
             "title": "Smoke on the Water",
             "author": "Deep Purple",
             "album": "Machine Head",
             "year": "1972",
             "pathMp3": "./assets/music/rock/DeepPurple-SmokeOnTheWater.mp3",
-            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jfif"
+            "pathImg": "./assets/img/rock/DeepPurple-MachineHead.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 8,
+            "id": 28,
             "title": "Wonderwall",
             "author": "Oasis",
             "album": "(What's the Story) Morning Glory?",
             "year": "1995",
             "pathMp3": "./assets/music/rock/Oasis-Wonderwall.mp3",
-            "pathImg": "./assets/img/rock/Oasis-MorningGlory.jfif"
+            "pathImg": "./assets/img/rock/Oasis-MorningGlory.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 9,
+            "id": 29,
             "title": "Enter Sandman",
             "author": "Metallica",
             "album": "Metallica",
             "year": "1991",
             "pathMp3": "./assets/music/rock/Metallica-EnterSandman.mp3",
-            "pathImg": "./assets/img/rock/Metallica-Metallica.jfif"
+            "pathImg": "./assets/img/rock/Metallica-Metallica.jfif",
+            "like": false,
+            "likeDate": ""
           }
         ],
         "img": "",
@@ -292,94 +352,114 @@
       "blues": {
         "songs": [
           {
-            "id": 1,
+            "id": 30,
             "title": "Sweet Home Chicago",
             "author": "Robert Johnson",
             "album": "King of the Delta Blues",
             "year": "1936",
             "pathMp3": "./assets/music/blues/RobertJohnson-SweetHomeChicago.mp3",
-            "pathImg": "./assets/img/blues/RobertJohnson-KingOfTheDeltaBlues.jfif"
+            "pathImg": "./assets/img/blues/RobertJohnson-KingOfTheDeltaBlues.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 2,
+            "id": 31,
             "title": "The Thrill is Gone",
             "author": "B.B. King",
             "album": "Completely Well",
             "year": "1969",
             "pathMp3": "./assets/music/blues/BBKing-TheThrillIsGone.mp3",
-            "pathImg": "./assets/img/blues/BBKing-CompletelyWell.jfif"
+            "pathImg": "./assets/img/blues/BBKing-CompletelyWell.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 3,
+            "id": 32,
             "title": "Hoochie Coochie Man",
             "author": "Muddy Waters",
             "album": "Electric Mud",
             "year": "1968",
             "pathMp3": "./assets/music/blues/MuddyWaters-HoochieCoochieMan.mp3",
-            "pathImg": "./assets/img/blues/MuddyWaters-ElectricMud.jfif"
+            "pathImg": "./assets/img/blues/MuddyWaters-ElectricMud.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 4,
+            "id": 33,
             "title": "Crossroads",
             "author": "Cream",
             "album": "Disraeli Gears",
             "year": "1967",
             "pathMp3": "./assets/music/blues/Cream-Crossroads.mp3",
-            "pathImg": "./assets/img/blues/Cream-DisraeliGears.jfif"
+            "pathImg": "./assets/img/blues/Cream-DisraeliGears.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 5,
+            "id": 34,
             "title": "Boom Boom",
             "author": "John Lee Hooker",
             "album": "The Definitive Collection",
             "year": "1962",
             "pathMp3": "./assets/music/blues/JohnLeeHooker-BoomBoom.mp3",
-            "pathImg": "./assets/img/blues/JohnLeeHooker-TheDefinitiveCollection.jfif"
+            "pathImg": "./assets/img/blues/JohnLeeHooker-TheDefinitiveCollection.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 6,
+            "id": 35,
             "title": "Pride and Joy",
             "author": "Stevie Ray Vaughan",
             "album": "Texas Flood",
             "year": "1983",
             "pathMp3": "./assets/music/blues/StevieRayVaughan-PrideAndJoy.mp3",
-            "pathImg": "./assets/img/blues/StevieRayVaughan-TexasFlood.jfif"
+            "pathImg": "./assets/img/blues/StevieRayVaughan-TexasFlood.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 7,
+            "id": 36,
             "title": "Every Day I Have the Blues",
             "author": "B.B. King",
             "album": "Live at the Regal",
             "year": "1965",
             "pathMp3": "./assets/music/blues/BBKing-EveryDayIHaveTheBlues.mp3",
-            "pathImg": "./assets/img/blues/BBKing-LiveAtTheRegal.jfif"
+            "pathImg": "./assets/img/blues/BBKing-LiveAtTheRegal.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 8,
+            "id": 37,
             "title": "Little Red Rooster",
             "author": "Willie Dixon",
             "album": "The Best of Willie Dixon",
             "year": "1961",
             "pathMp3": "./assets/music/blues/WillieDixon-LittleRedRooster.mp3",
-            "pathImg": "./assets/img/blues/WillieDixon-TheBestOf.jfif"
+            "pathImg": "./assets/img/blues/WillieDixon-TheBestOf.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 9,
+            "id": 38,
             "title": "I'm Tore Down",
             "author": "Eric Clapton",
             "album": "From the Cradle",
             "year": "1994",
             "pathMp3": "./assets/music/blues/EricClapton-ImToreDown.mp3",
-            "pathImg": "./assets/img/blues/EricClapton-FromTheCradle.jfif"
+            "pathImg": "./assets/img/blues/EricClapton-FromTheCradle.jfif",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 10,
+            "id": 39,
             "title": "Stormy Monday",
             "author": "The Allman Brothers Band",
             "album": "Idlewild South",
             "year": "1970",
             "pathMp3": "./assets/music/blues/TheAllmanBrothersBand-StormyMonday.mp3",
-            "pathImg": "./assets/img/blues/TheAllmanBrothersBand-IdlewildSouth.jfif"
+            "pathImg": "./assets/img/blues/TheAllmanBrothersBand-IdlewildSouth.jfif",
+            "like": false,
+            "likeDate": ""
           }
         ],
         "img": "",
@@ -388,94 +468,114 @@
       "reggae": {
         "songs": [
           {
-            "id": 0,
+            "id": 40,
             "title": "Could You Be Loved",
             "author": "Bob Marley",
             "album": "Uprising",
             "year": "1980",
             "pathMp3": "./assets/music/reggae/BobMarley-CouldYouBeLoved.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Uprising.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Uprising.jpg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 1,
+            "id": 41,
             "title": "No Woman, No Cry",
             "author": "Bob Marley",
             "album": "Live",
             "year": "1975",
             "pathMp3": "./assets/music/reggae/BobMarley-NoWomanNoCry.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Live.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Live.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 2,
+            "id": 42,
             "title": "Get Up, Stand Up",
             "author": "Bob Marley",
             "album": "Burnin'",
             "year": "1973",
             "pathMp3": "./assets/music/reggae/BobMarley-GetUpStandUp.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Burnin.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Burnin.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 3,
+            "id": 43,
             "title": "Redemption Song",
             "author": "Bob Marley",
             "album": "Uprising",
             "year": "1980",
             "pathMp3": "./assets/music/reggae/BobMarley-RedemptionSong.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Uprising.jpg"
+            "pathImg": "./assets/img/reggae/BobMarley-Uprising.jpg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 4,
+            "id": 44,
             "title": "Is This Love",
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-IsThisLove.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 5,
+            "id": 45,
             "title": "Buffalo Soldier",
             "author": "Bob Marley",
             "album": "Confrontation",
             "year": "1983",
             "pathMp3": "./assets/music/reggae/BobMarley-BuffaloSoldier.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Confrontation.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Confrontation.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 6,
+            "id": 46,
             "title": "Three Little Birds",
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-ThreeLittleBirds.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 7,
+            "id": 47,
             "title": "One Love",
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-OneLove.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 8,
+            "id": 48,
             "title": "Satisfy My Soul",
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-SatisfyMySoul.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 9,
+            "id": 49,
             "title": "Jamming",
             "author": "Bob Marley",
             "album": "Exodus",
             "year": "1977",
             "pathMp3": "./assets/music/reggae/BobMarley-Jamming.mp3",
-            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg"
+            "pathImg": "./assets/img/reggae/BobMarley-Exodus.jpeg",
+            "like": false,
+            "likeDate": ""
           }
         ],
         "img": "",
@@ -484,94 +584,114 @@
       "variete": {
         "songs": [
           {
-            "id": 1,
+            "id": 50,
             "title": "La Vie en rose",
             "author": "Édith Piaf",
             "album": "Édith Piaf Volume 1",
             "year": "1947",
             "pathMp3": "./assets/music/variete/EdithPiaf-LaVieEnRose.mp3",
-            "pathImg": "./assets/img/variete/EdithPiaf-LaVieEnRose.jpeg"
+            "pathImg": "./assets/img/variete/EdithPiaf-LaVieEnRose.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 2,
+            "id": 51,
             "title": "Je te promets",
             "author": "Johnny Hallyday",
             "album": "Je te promets",
             "year": "1986",
             "pathMp3": "./assets/music/variete/JohnnyHallyday-JeTePromets.mp3",
-            "pathImg": "./assets/img/variete/JohnnyHallyday-JeTePromets.jpeg"
+            "pathImg": "./assets/img/variete/JohnnyHallyday-JeTePromets.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 3,
+            "id": 52,
             "title": "Les Champs-Élysées",
             "author": "Joe Dassin",
             "album": "Les Champs-Élysées",
             "year": "1969",
             "pathMp3": "./assets/music/variete/JoeDassin-LesChampsElysees.mp3",
-            "pathImg": "./assets/img/variete/JoeDassin-LesChampsElysees.jpeg"
+            "pathImg": "./assets/img/variete/JoeDassin-LesChampsElysees.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 4,
+            "id": 53,
             "title": "Lily",
             "author": "Pierre Perret",
             "album": "Pierre Perret",
             "year": "1976",
             "pathMp3": "./assets/music/variete/PierrePerret-Lily.mp3",
-            "pathImg": "./assets/img/variete/PierrePerret-Lily.jpeg"
+            "pathImg": "./assets/img/variete/PierrePerret-Lily.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 5,
+            "id": 54,
             "title": "Pour que tu m'aimes encore",
             "author": "Céline Dion",
             "album": "D'eux",
             "year": "1995",
             "pathMp3": "./assets/music/variete/CelineDion-PourQueTuMimesEncore.mp3",
-            "pathImg": "./assets/img/variete/CelineDion-PourQueTuMimesEncore.jpeg"
+            "pathImg": "./assets/img/variete/CelineDion-PourQueTuMimesEncore.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 6,
+            "id": 55,
             "title": "Je l'aime à mourir",
             "author": "Francis Cabrel",
             "album": "Les Chemins de traverse",
             "year": "1979",
             "pathMp3": "./assets/music/variete/FrancisCabrel-JeLAimeAMour.mp3",
-            "pathImg": "./assets/img/variete/FrancisCabrel-JeLAimeAMour.jpeg"
+            "pathImg": "./assets/img/variete/FrancisCabrel-JeLAimeAMour.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 7,
+            "id": 56,
             "title": "Désenchantée",
             "author": "Mylène Farmer",
             "album": "L'instant X",
             "year": "1991",
             "pathMp3": "./assets/music/variete/MyleneFarmer-Desenchantée.mp3",
-            "pathImg": "./assets/img/variete/MyleneFarmer-Desenchantée.jpeg"
+            "pathImg": "./assets/img/variete/MyleneFarmer-Desenchantée.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 8,
+            "id": 57,
             "title": "Le Sud",
             "author": "Nino Ferrer",
             "album": "Nino Ferrer",
             "year": "1975",
             "pathMp3": "./assets/music/variete/NinoFerrer-LeSud.mp3",
-            "pathImg": "./assets/img/variete/NinoFerrer-LeSud.jpeg"
+            "pathImg": "./assets/img/variete/NinoFerrer-LeSud.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 9,
+            "id": 58,
             "title": "L'amour existe encore",
             "author": "Céline Dion",
             "album": "C'est une belle journée",
             "year": "1991",
             "pathMp3": "./assets/music/variete/CelineDion-LAmourExisteEncore.mp3",
-            "pathImg": "./assets/img/variete/CelineDion-LAmourExisteEncore.jpeg"
+            "pathImg": "./assets/img/variete/CelineDion-LAmourExisteEncore.jpeg",
+            "like": false,
+            "likeDate": ""
           },
           {
-            "id": 10,
+            "id": 59,
             "title": "C'est si bon",
             "author": "Eartha Kitt",
             "album": "La Vie en rose",
             "year": "1950",
             "pathMp3": "./assets/music/variete/EarthaKitt-CestSiBon.mp3",
-            "pathImg": "./assets/img/variete/EarthaKitt-CestSiBon.jpeg"
+            "pathImg": "./assets/img/variete/EarthaKitt-CestSiBon.jpeg",
+            "like": false,
+            "likeDate": ""
           }
         ],
         "img": "",

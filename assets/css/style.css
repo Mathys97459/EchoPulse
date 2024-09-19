@@ -422,7 +422,34 @@ svg#prev-btn {
 }
 
 .sidebar-links li button:hover {
-  color: var(--sidebar-bg-color);
-  background: var(--text-color);
+  color: var(--sidebar-bg-color) !important;
+  background: var(--text-color) !important;
   border-radius: 4px;
+}
+
+.sidebar-links li button.active {
+  color: var(--primary-color) !important;
+}
+
+button.favorite-button {
+  background-color: transparent;
+  border: none;
+  margin-top: 2px;
+}
+
+span.material-symbols-outlined {
+  color: var(--text-color);
+}
+
+button.favorite-button.liked span.material-symbols-outlined {
+  color: var(--primary-color);
+}
+
+.no-songs-message {
+  display: flex;
+  justify-content: center;
+  padding-top: calc(50vh - 1.2em);
+  font-size: 1.2em;
+  color: #888;
+  margin: 20px;
 }
