@@ -343,12 +343,19 @@ function afficherBanniere(songs, song) {
 
 function updateProgressBar(audio) {
   const progressBar = document.querySelector(".progress-bar");
+  const progressDot = document.querySelector(".progress-dot");
 
   if (audio.duration) {
     const percentage = (audio.currentTime / audio.duration) * 100;
+    
+    // Mise à jour de la largeur de la barre de progression
     progressBar.style.width = percentage + "%";
+    
+    // Mise à jour de la position du point sur la barre
+    progressDot.style.left = percentage + "%";
   }
 }
+
 
 // Fonction pour visualiser les données
 function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
@@ -376,7 +383,7 @@ function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
     canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
 
     // Dessiner les barres vers le bas à partir du milieu
-    // canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
+    canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
 
     x += barWidth + 1;
   }
