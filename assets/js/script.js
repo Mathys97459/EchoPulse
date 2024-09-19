@@ -11,29 +11,28 @@ let musics;
 
 /* LOADING PAGE */
 document.addEventListener("DOMContentLoaded", () => {
-    // Récupérer le fichier JSON et afficher les songs
-    fetch("../lib/musics.json")
-        .then((response) => response.json())
-        .then((data) => {
-            musics = data.musics;
-            displayPlaylistSongs('rap')
-        })
-        .catch((error) =>
-            console.error("Erreur lors du chargement des songs:", error)
-        );
+  // Récupérer le fichier JSON et afficher les songs
+  fetch("../lib/musics.json")
+    .then((response) => response.json())
+    .then((data) => {
+      musics = data.musics;
+      displayPlaylistSongs("rap");
+    })
+    .catch((error) =>
+      console.error("Erreur lors du chargement des songs:", error)
+    );
 });
 
-
 function displayPlaylists() {
-    // Clear previous playlists
-    playlistsDiv.innerHTML = '';
-    const songs = musics;
-    musicLike.style.display = "none";
-    playlistsDiv.style.display = "block";
-    playlistMusic.style.display = "block";
-    console.log(songs)
-    // Create a DocumentFragment to improve performance
-    const fragment = document.createDocumentFragment();
+  // Clear previous playlists
+  playlistsDiv.innerHTML = "";
+  const songs = musics;
+  musicLike.style.display = "none";
+  playlistsDiv.style.display = "block";
+  playlistMusic.style.display = "block";
+  console.log(songs);
+  // Create a DocumentFragment to improve performance
+  const fragment = document.createDocumentFragment();
 
   // Iterate over each playlist object using Object.entries
   Object.entries(songs).forEach(([key, playlist]) => {
@@ -42,16 +41,16 @@ function displayPlaylists() {
       const playlistDiv = document.createElement("div");
       playlistDiv.className = "playlist-card";
 
-            // Create a title for the playlist
-            const playlistLabel = document.createElement("h3");
-            const button = document.createElement("button");
-            button.innerText = data.label; // Use the label from your data
-            button.id = genre
-            button.value = genre
-            playlistLabel.className = "playlist-label";
+      // Create a title for the playlist
+      const playlistLabel = document.createElement("h3");
+      const button = document.createElement("button");
+      button.innerText = data.label; // Use the label from your data
+      button.id = genre;
+      button.value = genre;
+      playlistLabel.className = "playlist-label";
 
-            // Add an event listener to the button
-            button.addEventListener('click', () => displayPlaylistSongs(genre));
+      // Add an event listener to the button
+      button.addEventListener("click", () => displayPlaylistSongs(genre));
 
       // Append elements to the div
       playlistLabel.appendChild(button);
@@ -62,9 +61,8 @@ function displayPlaylists() {
     });
   });
 
-    // Append all playlist cards to the playlists container at once
-    playlistsDiv.appendChild(fragment);
-
+  // Append all playlist cards to the playlists container at once
+  playlistsDiv.appendChild(fragment);
 }
 
 /* DISPLAY musics */
@@ -119,6 +117,21 @@ function displayPlaylistSongs(genre) {
                 // Ajouter l'événement de clic au bouton de lecture
                 musicCard.addEventListener("click", () => afficherBanniere(songs, song));
     
+                // Ajout du bouton favori
+      const favoriteButton = document.createElement("button");
+      favoriteButton.classList.add("favorite-button");
+      if (song.like) {
+        favoriteButton.classList.add("liked");
+      }
+      favoriteButton.innerHTML = `<span class="material-symbols-outlined">${
+        song.like ? "favorite" : "favorite_border"
+      }</span>`;
+      favoriteButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        toggleFavorite(song.id);
+      });
+      musicCard.appendChild(favoriteButton);
+
                 // Ajout de l'événement 'ended'
                 audio.addEventListener("ended", () => {
                     const nextMusiqueId = parseInt(song.id) + 1;
@@ -132,87 +145,161 @@ function displayPlaylistSongs(genre) {
                 });
             });
     }
-}else{
-    playlistsDiv.style.display = "block";
-    playlistMusic.style.display = "block";
-    musicLike.style.display = "none";
-    }
-
-}
+    }else{
+        playlistsDiv.style.display = "block";
+        playlistMusic.style.display = "block";
+        musicLike.style.display = "none";
+        }
+  }
 
 /* DISPLAY musics */
 function displaySongs() {
-    const playlists = musics;
-    if (musicLike.innerHTML == "") {
-        playlistsDiv.style.display = "none";
-        playlistMusic.style.display = "none";
-        musicLike.style.display = "block";
-        Object.entries(playlists).forEach(([key, playlist]) => {
-            Object.entries(playlist).forEach(([genre]) => {
-                playlist[genre].songs.forEach(song => {
-                    // Création de l'élément pour chaque carte de song
-                    const musicCard = document.createElement("div");
-                    musicCard.classList.add("music-card");
-                    musicCard.classList.add("music-" + song.id);
+  const playlists = musics;
+  if (musicLike.innerHTML === "") {
+    playlistsDiv.style.display = "none";
+    playlistMusic.style.display = "none";
+    musicLike.style.display = "block";
 
-          // Ajout de l'image de l'album
-          const img = document.createElement("img");
-          img.src = song.pathImg;
-          img.alt = `Pochette de l'album ${song.album}`;
-          musicCard.appendChild(img);
+    let likedSongs = [];
 
-          // Ajout des informations de la song
-          const infoDiv = document.createElement("div");
-          infoDiv.classList.add("music-info");
-          infoDiv.innerHTML = `
-        <h3>${song.title}</h3>
-        <p>${song.author}</p>
-        `;
-          musicCard.appendChild(infoDiv);
-
-           // Ajout de la frequence
-           const freqDiv = document.createElement("div");
-           freqDiv.classList.add("banner-stats");
-           freqDiv.innerHTML = `
-                         <div class="vizualisator">
-             <canvas class="visualizer-${song.id}"></canvas>
-           </div>`;
-           musicCard.appendChild(freqDiv);
-
-          // Ajout de l'audio
-          const audio = document.createElement("audio");
-          audio.id = `audio-${song.id}`;
-          audio.src = song.pathMp3;
-          audio.controls = false;
-          audio.style.display = "none"; // Cacher les éléments audio
-          musicCard.appendChild(audio);
-
-          musicLike.appendChild(musicCard);
-          // Ajouter l'événement de clic au bouton de lecture
-          musicCard.addEventListener("click", () =>
-            afficherBanniere(playlist, song)
-          );
-
-                    // Ajout de l'événement 'ended'
-                    audio.addEventListener("ended", () => {
-                        const nextMusiqueId = parseInt(song.id) + 1;
-                        const nextAudio = document.getElementById(`audio-${nextMusiqueId}`);
-                        // Vérifier si l'audio suivant existe
-                        if (nextAudio) {
-                            playState(nextMusiqueId);
-                        } else {
-                            playState(0);
-                        }
-                    });
-                });
-            })
+    Object.entries(playlists).forEach(([key, playlist]) => {
+      Object.entries(playlist).forEach(([genre]) => {
+        playlist[genre].songs.forEach((song) => {
+          if (song.like) {
+            likedSongs.push(song);
+          }
         });
-    } else {
-        playlistsDiv.style.display = "none";
-        playlistMusic.style.display = "none";
-        musicLike.style.display = "block";
-    }
+      });
+    });
+    console.log(likedSongs);
 
+    console.log("Chansons likées avant tri :", likedSongs);
+
+    // Trier les chansons likées par date de like
+    likedSongs.sort((a, b) =>
+      b.likeDate ? new Date(b.likeDate) - new Date(a.likeDate) : 0
+    );
+
+    console.log("Chansons likées après tri :", likedSongs);
+
+    // Effacer le contenu précédent
+    musicLike.innerHTML = "";
+
+    if (likedSongs.length === 0) {
+      const noSongsMessage = document.createElement("div");
+      noSongsMessage.classList.add("no-songs-message");
+      noSongsMessage.textContent = "Aucune musique dans vos favoris.";
+      musicLike.appendChild(noSongsMessage);
+    } else {
+      likedSongs.forEach((song) => {
+        const musicCard = document.createElement("div");
+        musicCard.classList.add("music-card");
+        musicCard.classList.add("music-" + song.id);
+
+        const img = document.createElement("img");
+        img.src = song.pathImg;
+        img.alt = `Pochette de l'album ${song.album}`;
+        musicCard.appendChild(img);
+
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("music-info");
+        infoDiv.innerHTML = `
+          <h3>${song.title}</h3>
+          <p>${song.author}</p>
+        `;
+        musicCard.appendChild(infoDiv);
+
+        const freqDiv = document.createElement("div");
+        freqDiv.classList.add("banner-stats");
+        freqDiv.innerHTML = `
+                      <div class="vizualisator">
+          <canvas class="visualizer-${song.id}"></canvas>
+        </div>`;
+        musicCard.appendChild(freqDiv);
+
+        const favoriteButton = document.createElement("button");
+        favoriteButton.classList.add("favorite-button");
+        if (song.like) {
+          favoriteButton.classList.add("liked");
+        }
+        favoriteButton.innerHTML = `<span class="material-symbols-outlined">${
+          song.like ? "favorite" : "favorite_border"
+        }</span>`;
+        favoriteButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+          toggleFavorite(song.id);
+        });
+        musicCard.appendChild(favoriteButton);
+
+        const audio = document.createElement("audio");
+        audio.id = `audio-${song.id}`;
+        audio.src = song.pathMp3;
+        audio.controls = false;
+        audio.style.display = "none";
+        musicCard.appendChild(audio);
+
+        musicLike.appendChild(musicCard);
+        musicCard.addEventListener("click", () =>
+          afficherBanniere(playlists, song)
+        );
+
+        audio.addEventListener("ended", () => {
+          const nextMusiqueId = parseInt(song.id) + 1;
+          const nextAudio = document.getElementById(`audio-${nextMusiqueId}`);
+          if (nextAudio) {
+            playState(nextMusiqueId);
+          } else {
+            playState(0);
+          }
+        });
+      });
+    }
+  } else {
+    playlistsDiv.style.display = "none";
+    playlistMusic.style.display = "none";
+    musicLike.style.display = "block";
+  }
+}
+
+function toggleFavorite(songId) {
+  let songFound = false;
+  Object.entries(musics[0]).forEach(([genre, data]) => {
+    data.songs.forEach((song) => {
+      if (song.id === songId) {
+        // Inverser la valeur de 'like'
+        song.like = !song.like;
+        if (song.like) {
+          song.likeDate = new Date(); // Ajouter la date de like
+        } else {
+          delete song.likeDate; // Supprimer la date de like si le morceau n'est plus liké
+        }
+
+        console.log(
+          `La chanson ${song.title} est maintenant ${
+            song.like ? "likée" : "non likée"
+          }`
+        );
+
+        // Mettre à jour visuellement le bouton
+        const favoriteButton = document.querySelector(
+          `.music-${songId} .favorite-button`
+        );
+        if (favoriteButton) {
+          const icon = favoriteButton.querySelector(
+            "span.material-symbols-outlined"
+          );
+          icon.textContent = song.like ? "favorite" : "favorite_border";
+          favoriteButton.classList.toggle("liked", song.like);
+        }
+
+        songFound = true;
+      }
+    });
+  });
+
+  if (!songFound) {
+    console.error("Chanson non trouvée dans les données.");
+  }
 }
 
 /*CHANGER L'ETAT ET LE SVG DU BOUTON PLAY */
@@ -276,15 +363,24 @@ function playState(id) {
   }
 }
 
+function setActiveButton(buttonId) {
+  const buttons = document.querySelectorAll(".sidebar-links button");
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  const activeButton = document.getElementById(buttonId);
+  activeButton.classList.add("active");
+}
 
 function afficherBanniere(songs, song) {
-    console.log(songs)
-    console.log(song)
-    const banner = document.getElementById("musicBanner");
-    const img = document.getElementById("banner-img");
-    const title = document.getElementById("banner-title");
-    const author = document.getElementById("banner-author");
-    const bannerBtn = document.querySelector(".banner-btn");
+  console.log(songs);
+  console.log(song);
+  const banner = document.getElementById("musicBanner");
+  const img = document.getElementById("banner-img");
+  const title = document.getElementById("banner-title");
+  const author = document.getElementById("banner-author");
+  const bannerBtn = document.querySelector(".banner-btn");
 
   banner.classList.remove("music-banner-off");
   banner.classList.add("music-banner-on");
@@ -357,10 +453,16 @@ function afficherBanniere(songs, song) {
 
 function updateProgressBar(audio) {
   const progressBar = document.querySelector(".progress-bar");
+  const progressDot = document.querySelector(".progress-dot");
 
   if (audio.duration) {
     const percentage = (audio.currentTime / audio.duration) * 100;
+
+    // Mise à jour de la largeur de la barre de progression
     progressBar.style.width = percentage + "%";
+
+    // Mise à jour de la position du point sur la barre
+    progressDot.style.left = percentage + "%";
   }
 }
 
