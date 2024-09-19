@@ -1,9 +1,7 @@
 const musicLike = document.getElementById("musicLike");
 const playlistsDiv = document.getElementById("playlists");
-// const canvas = document.getElementById("visualizer");
-// const canvasCtx = canvas.getContext("2d");
 const footer = document.getElementById("footer");
-
+const playlistMusic = document.getElementById("playlistMusic");
 let steps = 1;
 let currentAudio = null; // Variable pour suivre l'audio actuellement joué
 let audioCtx = null; // Contexte audio pour le visualiseur
@@ -72,10 +70,8 @@ function displayPlaylists() {
 /* DISPLAY musics */
 function displayPlaylistSongs(genre) {
     const songs = musics[0][genre]
-    playlistMusic.innerHTML = ''
-    playlistsDiv.style.display = "block";
-    playlistMusic.style.display = "block";
-    musicLike.style.display = "none";
+    if (musicLike.innerHTML == "") {
+
     if (songs.length == 0) {
         playlistMusic.innerHTML = "Aucune musique dans cette playlist.";
     }
@@ -102,6 +98,15 @@ function displayPlaylistSongs(genre) {
             `;
                 musicCard.appendChild(infoDiv);
     
+                // Ajout de la frequence
+           const freqDiv = document.createElement("div");
+           freqDiv.classList.add("banner-stats");
+           freqDiv.innerHTML = `
+                         <div class="vizualisator">
+             <canvas class="visualizer-${song.id}"></canvas>
+           </div>`;
+           musicCard.appendChild(freqDiv);
+
                 // Ajout de l'audio
                 const audio = document.createElement("audio");
                 audio.id = `audio-${song.id}`;
@@ -126,6 +131,11 @@ function displayPlaylistSongs(genre) {
                     }
                 });
             });
+    }
+}else{
+    playlistsDiv.style.display = "block";
+    playlistMusic.style.display = "block";
+    musicLike.style.display = "none";
     }
 
 }
@@ -165,7 +175,7 @@ function displaySongs() {
            freqDiv.classList.add("banner-stats");
            freqDiv.innerHTML = `
                          <div class="vizualisator">
-             <canvas class="canvasVizualisator" id="visualizer-${song.id}"></canvas>
+             <canvas class="visualizer-${song.id}"></canvas>
            </div>`;
            musicCard.appendChild(freqDiv);
 
@@ -209,8 +219,8 @@ function displaySongs() {
 function playState(id) {
   const btn = document.getElementById("play-" + id);
   const audio = document.getElementById(`audio-${id}`);
-  const canvas = document.getElementById(`visualizer-${id}`);
-
+  const canvas = document.querySelectorAll(`.visualizer-${id}`);
+  console.log(canvas);
   // Mettre tous les autres sons en pause
   if (currentAudio && currentAudio !== audio) {
     currentAudio.pause();
@@ -250,12 +260,15 @@ function playState(id) {
     }
 
     // Commencer la visualisation
-    frequenciesVisualizer(
-      canvas,
-      audio.analyser,
-      audio.dataArray,
-      audio.bufferLength
-    );
+    canvas.forEach(canva => {
+        frequenciesVisualizer(
+            canva,
+            audio.analyser,
+            audio.dataArray,
+            audio.bufferLength
+          );
+    });
+    
   } else {
     audio.pause(); // sinon on le met en pause et on change le svg
     btn.innerHTML =
@@ -324,6 +337,7 @@ function afficherBanniere(songs, song) {
         playState(song.id)
     });
     btnNext.addEventListener("click", () => {
+        console.log(song)
         if (songs.songs[song.id + 1]) {
             afficherBanniere(songs, songs.songs[song.id + 1]);
         } else {
@@ -363,11 +377,8 @@ function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
   const midY = canvas.height / 2; // Milieu du canvas
 
   for (let i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i] / 3;
+    barHeight = dataArray[i] / 4;
 
-    if (!barHeight) {
-      barHeight = 3;
-    }
 
     const color = "#FA64B2";
 
@@ -376,7 +387,7 @@ function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
     canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
 
     // Dessiner les barres vers le bas à partir du milieu
-    // canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
+    canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
 
     x += barWidth + 1;
   }
