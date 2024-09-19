@@ -1,8 +1,7 @@
 const musicLike = document.getElementById("musicLike");
 const playlistsDiv = document.getElementById("playlists");
-const playlistMusic = document.getElementById("playlistMusic");
-const canvas = document.getElementById("visualizer");
-const canvasCtx = canvas.getContext("2d");
+// const canvas = document.getElementById("visualizer");
+// const canvasCtx = canvas.getContext("2d");
 const footer = document.getElementById("footer");
 
 let steps = 1;
@@ -131,7 +130,6 @@ function displayPlaylistSongs(genre) {
 
 }
 
-
 /* DISPLAY musics */
 function displaySongs() {
     const playlists = musics;
@@ -161,6 +159,15 @@ function displaySongs() {
         <p>${song.author}</p>
         `;
           musicCard.appendChild(infoDiv);
+
+           // Ajout de la frequence
+           const freqDiv = document.createElement("div");
+           freqDiv.classList.add("banner-stats");
+           freqDiv.innerHTML = `
+                         <div class="vizualisator">
+             <canvas class="canvasVizualisator" id="visualizer-${song.id}"></canvas>
+           </div>`;
+           musicCard.appendChild(freqDiv);
 
           // Ajout de l'audio
           const audio = document.createElement("audio");
@@ -202,6 +209,7 @@ function displaySongs() {
 function playState(id) {
   const btn = document.getElementById("play-" + id);
   const audio = document.getElementById(`audio-${id}`);
+  const canvas = document.getElementById(`visualizer-${id}`);
 
   // Mettre tous les autres sons en pause
   if (currentAudio && currentAudio !== audio) {
@@ -221,34 +229,40 @@ function playState(id) {
     // Initialiser le contexte audio et le visualiseur pour cette song
     if (!audioCtx) {
       audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      analyser = audioCtx.createAnalyser();
-      analyser.fftSize = 512;
-      bufferLength = analyser.frequencyBinCount;
-      dataArray = new Uint8Array(bufferLength);
     }
 
+    // Créer la source seulement si elle n'existe pas
     if (!audio.source) {
+      const analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 512;
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+
+      // Associer ces objets à l'élément audio pour pouvoir les réutiliser
       audio.source = audioCtx.createMediaElementSource(audio);
+      audio.source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+
+      // Associer l'analyseur et les données de visualisation
+      audio.analyser = analyser;
+      audio.dataArray = dataArray;
+      audio.bufferLength = bufferLength;
     }
 
-    // Connecter la source à l'analyseur
-    audio.source.connect(analyser);
-    analyser.connect(audioCtx.destination);
-
-    frequenciesVisualizer();
+    // Commencer la visualisation
+    frequenciesVisualizer(
+      canvas,
+      audio.analyser,
+      audio.dataArray,
+      audio.bufferLength
+    );
   } else {
-    audio.pause(); //sinon on le met en pause et on change le svg
+    audio.pause(); // sinon on le met en pause et on change le svg
     btn.innerHTML =
       '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 16 16"> <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" /> </svg>';
   }
-
-  // Connecter la source à l'analyseur
-  audio.source.connect(analyser);
-  analyser.connect(audioCtx.destination);
-
-  // Commencer la visualisation
-  frequenciesVisualizer();
 }
+
 
 function afficherBanniere(songs, song) {
     console.log(songs)
@@ -337,10 +351,10 @@ function updateProgressBar(audio) {
 }
 
 // Fonction pour visualiser les données
-function frequenciesVisualizer() {
+function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
+  const canvasCtx = canvas.getContext("2d");
   canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Obtenir les données de fréquence
   analyser.getByteFrequencyData(dataArray);
   const barWidth = (canvas.width / bufferLength) * 2.5;
   let barHeight;
@@ -362,13 +376,14 @@ function frequenciesVisualizer() {
     canvasCtx.fillRect(x, midY - barHeight / 2, barWidth, barHeight / 2);
 
     // Dessiner les barres vers le bas à partir du milieu
-    canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
+    // canvasCtx.fillRect(x, midY, barWidth, barHeight / 2);
 
     x += barWidth + 1;
   }
 
-  // Boucler la visualisation
   if (currentAudio && !currentAudio.paused) {
-    requestAnimationFrame(frequenciesVisualizer);
+    requestAnimationFrame(() =>
+      frequenciesVisualizer(canvas, analyser, dataArray, bufferLength)
+    );
   }
 }
