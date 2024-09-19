@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((response) => response.json())
         .then((data) => {
             musics = data.musics;
-            displayPlaylists();
+            displayPlaylists(musics);
             displayPlaylistSong(musics, 'rap')
             
         })
@@ -50,7 +50,6 @@ window.onload = function () {
 };
 
 function displayPlaylists() {
-    console.log("displayPlaylists")
     // Clear previous playlists
     playlistsDiv.innerHTML = "";
     const songs = musics;
@@ -90,6 +89,7 @@ function displayPlaylists() {
 
     // Append all playlist cards to the playlists container at once
     playlistsDiv.appendChild(fragment);
+    displayPlaylistSong(songs, 'rap')
 }
 
 

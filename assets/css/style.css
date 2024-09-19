@@ -439,6 +439,7 @@ button.banner-previous {
 }
 
 .music-card {
+  cursor: pointer;
   transition: background-color 0.3s ease; /* Durée de la transition */
 }
 
