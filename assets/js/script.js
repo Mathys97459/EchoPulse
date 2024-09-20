@@ -155,7 +155,8 @@ function displayPlaylistSongs(genre) {
 /* DISPLAY musics */
 function displaySongs() {
   const playlists = musics;
-  if (musicLike.innerHTML === "") {
+  // if (musicLike.innerHTML === "") {
+  //   console.log("musicLike est vide")
     playlistsDiv.style.display = "none";
     playlistMusic.style.display = "none";
     musicLike.style.display = "block";
@@ -254,11 +255,13 @@ function displaySongs() {
         });
       });
     }
-  } else {
-    playlistsDiv.style.display = "none";
-    playlistMusic.style.display = "none";
-    musicLike.style.display = "block";
-  }
+  // } else {
+  //   playlistsDiv.style.display = "none";
+  //   playlistMusic.style.display = "none";
+  //   musicLike.style.display = "block";
+
+  //   console.log("musicLike est rempli")
+  // }
 }
 
 function toggleFavorite(songId) {
