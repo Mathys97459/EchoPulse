@@ -67,90 +67,90 @@ function displayPlaylists() {
 
 /* DISPLAY musics */
 function displayPlaylistSongs(genre) {
-    const songs = musics[0][genre]
-    if (musicLike.innerHTML == "") {
-
+  const songs = musics[0][genre];
+  if (musicLike.innerHTML == "") {
     if (songs.length == 0) {
-        playlistMusic.innerHTML = "Aucune musique dans cette playlist.";
-    }
-    else{
-        console.log(songs)
-            songs.songs.forEach(song => {
-                // Création de l'élément pour chaque carte de song
-                const musicCard = document.createElement("div");
-                musicCard.classList.add("music-card");
-                musicCard.classList.add("music-" + song.id);
-    
-                // Ajout de l'image de l'album
-                const img = document.createElement("img");
-                img.src = song.pathImg;
-                img.alt = `Pochette de l'album ${song.album}`;
-                musicCard.appendChild(img);
-    
-                // Ajout des informations de la song
-                const infoDiv = document.createElement("div");
-                infoDiv.classList.add("music-info");
-                infoDiv.innerHTML = `
+      playlistMusic.innerHTML = "Aucune musique dans cette playlist.";
+    } else {
+      console.log(songs);
+      songs.songs.forEach((song) => {
+        // Création de l'élément pour chaque carte de song
+        const musicCard = document.createElement("div");
+        musicCard.classList.add("music-card");
+        musicCard.classList.add("music-" + song.id);
+
+        // Ajout de l'image de l'album
+        const img = document.createElement("img");
+        img.src = song.pathImg;
+        img.alt = `Pochette de l'album ${song.album}`;
+        musicCard.appendChild(img);
+
+        // Ajout des informations de la song
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("music-info");
+        infoDiv.innerHTML = `
             <h3>${song.title}</h3>
             <p>${song.author}</p>
             `;
-                musicCard.appendChild(infoDiv);
-    
-                // Ajout de la frequence
-           const freqDiv = document.createElement("div");
-           freqDiv.classList.add("banner-stats");
-           freqDiv.innerHTML = `
+        musicCard.appendChild(infoDiv);
+
+        // Ajout de la frequence
+        const freqDiv = document.createElement("div");
+        freqDiv.classList.add("banner-stats");
+        freqDiv.innerHTML = `
                          <div class="vizualisator">
              <canvas class="visualizer-${song.id}"></canvas>
            </div>`;
-           musicCard.appendChild(freqDiv);
+        musicCard.appendChild(freqDiv);
 
-                // Ajout de l'audio
-                const audio = document.createElement("audio");
-                audio.id = `audio-${song.id}`;
-                audio.src = song.pathMp3;
-                audio.controls = false;
-                audio.style.display = "none"; // Cacher les éléments audio
-                musicCard.appendChild(audio);
-    
-                playlistMusic.appendChild(musicCard);
-                // Ajouter l'événement de clic au bouton de lecture
-                musicCard.addEventListener("click", () => afficherBanniere(songs, song));
-    
-                // Ajout du bouton favori
-      const favoriteButton = document.createElement("button");
-      favoriteButton.classList.add("favorite-button");
-      if (song.like) {
-        favoriteButton.classList.add("liked");
-      }
-      favoriteButton.innerHTML = `<span class="material-symbols-outlined">${
-        song.like ? "favorite" : "favorite_border"
-      }</span>`;
-      favoriteButton.addEventListener("click", (event) => {
-        event.stopPropagation();
-        toggleFavorite(song.id);
-      });
-      musicCard.appendChild(favoriteButton);
+        // Ajout de l'audio
+        const audio = document.createElement("audio");
+        audio.id = `audio-${song.id}`;
+        audio.src = song.pathMp3;
+        audio.controls = false;
+        audio.style.display = "none"; // Cacher les éléments audio
+        musicCard.appendChild(audio);
 
-                // Ajout de l'événement 'ended'
-                audio.addEventListener("ended", () => {
-                    const nextMusiqueId = parseInt(song.id) + 1;
-                    const nextAudio = document.getElementById(`audio-${nextMusiqueId}`);
-                    // Vérifier si l'audio suivant existe
-                    if (nextAudio) {
-                        playState(nextMusiqueId);
-                    } else {
-                        playState(0);
-                    }
-                });
-            });
-    }
-    }else{
-        playlistsDiv.style.display = "block";
-        playlistMusic.style.display = "block";
-        musicLike.style.display = "none";
+        playlistMusic.appendChild(musicCard);
+        // Ajouter l'événement de clic au bouton de lecture
+        musicCard.addEventListener("click", () =>
+          afficherBanniere(songs, song)
+        );
+
+        // Ajout du bouton favori
+        const favoriteButton = document.createElement("button");
+        favoriteButton.classList.add("favorite-button");
+        if (song.like) {
+          favoriteButton.classList.add("liked");
         }
+        favoriteButton.innerHTML = `<span class="material-symbols-outlined">${
+          song.like ? "favorite" : "favorite_border"
+        }</span>`;
+        favoriteButton.addEventListener("click", (event) => {
+          event.stopPropagation();
+          toggleFavorite(song.id);
+        });
+        musicCard.appendChild(favoriteButton);
+
+        // Ajout de l'événement 'ended'
+        audio.addEventListener("ended", () => {
+          const nextMusiqueId = parseInt(song.id) + 1;
+          const nextAudio = document.getElementById(`audio-${nextMusiqueId}`);
+          // Vérifier si l'audio suivant existe
+          if (nextAudio) {
+            playState(nextMusiqueId);
+          } else {
+            playState(0);
+          }
+        });
+      });
+    }
+  } else {
+    playlistsDiv.style.display = "block";
+    playlistMusic.style.display = "block";
+    musicLike.style.display = "none";
   }
+}
 
 /* DISPLAY musics */
 function displaySongs() {
@@ -347,15 +347,14 @@ function playState(id) {
     }
 
     // Commencer la visualisation
-    canvas.forEach(canva => {
-        frequenciesVisualizer(
-            canva,
-            audio.analyser,
-            audio.dataArray,
-            audio.bufferLength
-          );
+    canvas.forEach((canva) => {
+      frequenciesVisualizer(
+        canva,
+        audio.analyser,
+        audio.dataArray,
+        audio.bufferLength
+      );
     });
-    
   } else {
     audio.pause(); // sinon on le met en pause et on change le svg
     btn.innerHTML =
@@ -418,35 +417,35 @@ function afficherBanniere(songs, song) {
 
   btnNext.classList.add("banner-next");
   btnNext.id = "next-" + song.id; // Définir l'ID
-  btnNext.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#FA64B2" viewBox="0 0 43.25 45.39"> <path fill="#fa64b2" d="M3.89,45.39h-.89c-1.41-.29-2.3-1.16-2.68-2.52-.19-.66-.31-1.36-.31-2.04C0,28.75,0,16.66,0,4.58c0-.87.12-1.73.46-2.55C1.03.67,2.3-.08,3.74.07c1.1.11,2.02.61,2.9,1.22,8.26,5.68,16.52,11.36,24.77,17.04.44.3.87.63,1.24,1,1.4,1.43,1.91,3.1,1.18,5.02-.46,1.21-1.37,2.04-2.41,2.76-8.09,5.56-16.18,11.13-24.26,16.7-1.01.7-2.04,1.35-3.28,1.58Z"/> <path fill="#fa64b2" d="M39.53,45.39c-.41-.16-.85-.26-1.21-.5-.79-.52-1.1-1.3-1.1-2.24,0-5.8,0-11.61,0-17.41,0-7.46.03-14.92-.02-22.37-.01-1.81,1.3-2.96,2.86-2.86.13,0,.27,0,.4,0,1.79,0,2.78.97,2.78,2.76,0,13.28,0,26.55,0,39.83,0,1.54-.57,2.29-2.12,2.79h-1.6Z"/> </svg> `;
+  btnNext.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FA64B2" viewBox="0 0 43.25 45.39"> <path fill="#fa64b2" d="M3.89,45.39h-.89c-1.41-.29-2.3-1.16-2.68-2.52-.19-.66-.31-1.36-.31-2.04C0,28.75,0,16.66,0,4.58c0-.87.12-1.73.46-2.55C1.03.67,2.3-.08,3.74.07c1.1.11,2.02.61,2.9,1.22,8.26,5.68,16.52,11.36,24.77,17.04.44.3.87.63,1.24,1,1.4,1.43,1.91,3.1,1.18,5.02-.46,1.21-1.37,2.04-2.41,2.76-8.09,5.56-16.18,11.13-24.26,16.7-1.01.7-2.04,1.35-3.28,1.58Z"/> <path fill="#fa64b2" d="M39.53,45.39c-.41-.16-.85-.26-1.21-.5-.79-.52-1.1-1.3-1.1-2.24,0-5.8,0-11.61,0-17.41,0-7.46.03-14.92-.02-22.37-.01-1.81,1.3-2.96,2.86-2.86.13,0,.27,0,.4,0,1.79,0,2.78.97,2.78,2.76,0,13.28,0,26.55,0,39.83,0,1.54-.57,2.29-2.12,2.79h-1.6Z"/> </svg> `;
 
   btnPrevious.classList.add("banner-previous");
   btnPrevious.id = "prev-" + song.id; // Définir l'ID
-  btnPrevious.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg " width="30" height="30" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 43.25 45.39"><path fill="#fa64b2" d="M39.35,45.39h.89c1.41-.29,2.3-1.16,2.68-2.52.19-.66.31-1.36.31-2.04.02-12.08.01-24.16.01-36.24,0-.87-.12-1.73-.46-2.55-.57-1.36-1.84-2.11-3.28-1.96-1.1.11-2.02.61-2.9,1.22-8.26,5.68-16.52,11.36-24.77,17.04-.44.3-.87.63-1.24,1-1.4,1.43-1.91,3.1-1.18,5.02.46,1.21,1.37,2.04,2.41,2.76,8.09,5.56,16.18,11.13,24.26,16.7,1.01.7,2.04,1.35,3.28,1.58Z"/><path fill="#fa64b2" d="M3.72,45.39c.41-.16.85-.26,1.21-.5.79-.52,1.1-1.3,1.1-2.24,0-5.8,0-11.61,0-17.41,0-7.46-.03-14.92.02-22.37C6.05,1.05,4.74-.09,3.18,0c-.13,0-.27,0-.4,0C.99,0,0,.98,0,2.76,0,16.04,0,29.32,0,42.59c0,1.54.57,2.29,2.12,2.79h1.6Z"/></svg>`;
+  btnPrevious.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg " width="15" height="15" fill="#FA64B2" class="bi bi-play-fill" viewBox="0 0 43.25 45.39"><path fill="#fa64b2" d="M39.35,45.39h.89c1.41-.29,2.3-1.16,2.68-2.52.19-.66.31-1.36.31-2.04.02-12.08.01-24.16.01-36.24,0-.87-.12-1.73-.46-2.55-.57-1.36-1.84-2.11-3.28-1.96-1.1.11-2.02.61-2.9,1.22-8.26,5.68-16.52,11.36-24.77,17.04-.44.3-.87.63-1.24,1-1.4,1.43-1.91,3.1-1.18,5.02.46,1.21,1.37,2.04,2.41,2.76,8.09,5.56,16.18,11.13,24.26,16.7,1.01.7,2.04,1.35,3.28,1.58Z"/><path fill="#fa64b2" d="M3.72,45.39c.41-.16.85-.26,1.21-.5.79-.52,1.1-1.3,1.1-2.24,0-5.8,0-11.61,0-17.41,0-7.46-.03-14.92.02-22.37C6.05,1.05,4.74-.09,3.18,0c-.13,0-.27,0-.4,0C.99,0,0,.98,0,2.76,0,16.04,0,29.32,0,42.59c0,1.54.57,2.29,2.12,2.79h1.6Z"/></svg>`;
 
-    // Ajouter le nouveau bouton à la div
-    bannerBtn.appendChild(btnPrevious);
-    bannerBtn.appendChild(btnPlay);
-    bannerBtn.appendChild(btnNext);
-    // Ajouter l'événement de clic au bouton de lecture
-    btnPlay.addEventListener("click", () => {
-        playState(song.id)
-    });
-    btnNext.addEventListener("click", () => {
-        console.log(song)
-        if (songs.songs[song.id + 1]) {
-            afficherBanniere(songs, songs.songs[song.id + 1]);
-        } else {
-            afficherBanniere(songs, songs.songs[0]);
-        }
-    });
-    btnPrevious.addEventListener("click", () => {
-        if (songs.songs[song.id - 1]) {
-            afficherBanniere(songs, songs.songs[song.id - 1]);
-        } else {
-            afficherBanniere(songs, songs.songs[songs.songs.length - 1]);
-        }
-    });
+  // Ajouter le nouveau bouton à la div
+  bannerBtn.appendChild(btnPrevious);
+  bannerBtn.appendChild(btnPlay);
+  bannerBtn.appendChild(btnNext);
+  // Ajouter l'événement de clic au bouton de lecture
+  btnPlay.addEventListener("click", () => {
+    playState(song.id);
+  });
+  btnNext.addEventListener("click", () => {
+    console.log(song);
+    if (songs.songs[song.id + 1]) {
+      afficherBanniere(songs, songs.songs[song.id + 1]);
+    } else {
+      afficherBanniere(songs, songs.songs[0]);
+    }
+  });
+  btnPrevious.addEventListener("click", () => {
+    if (songs.songs[song.id - 1]) {
+      afficherBanniere(songs, songs.songs[song.id - 1]);
+    } else {
+      afficherBanniere(songs, songs.songs[songs.songs.length - 1]);
+    }
+  });
 
   playState(song.id);
 }
@@ -480,7 +479,6 @@ function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
 
   for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i] / 4;
-
 
     const color = "#FA64B2";
 
