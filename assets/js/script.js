@@ -1,8 +1,8 @@
 const musicLike = document.getElementById("musicLike");
-const playlistsDiv = document.getElementById("playlists");
 const footer = document.getElementById("footer");
 const playlistMusic = document.getElementById("playlistMusic");
-let steps = 1;
+const titlePlaylist = document.getElementById("titlePlaylist");
+
 let currentAudio = null; // Variable pour suivre l'audio actuellement joué
 let audioCtx = null; // Contexte audio pour le visualiseur
 let analyser = null; // Analyseur pour les données audio
@@ -334,51 +334,12 @@ function updateProgressBar(audio) {
   }
   
 
-function displayPlaylists() {
-  // Clear previous playlists
-  playlistsDiv.innerHTML = "";
-  const songs = musics;
-  musicLike.style.display = "none";
-  playlistsDiv.style.display = "block";
-  playlistMusic.style.display = "block";
-  // Create a DocumentFragment to improve performance
-  const fragment = document.createDocumentFragment();
-
-  // Iterate over each playlist object using Object.entries
-  Object.entries(songs).forEach(([key, playlist]) => {
-    Object.entries(playlist).forEach(([genre, data]) => {
-      // Create a div for the playlist
-      const playlistDiv = document.createElement("div");
-      playlistDiv.className = "playlist-card";
-
-      // Create a title for the playlist
-      const playlistLabel = document.createElement("h3");
-      const button = document.createElement("button");
-      button.innerText = data.label; // Use the label from your data
-      button.id = genre;
-      button.value = genre;
-      playlistLabel.className = "playlist-label";
-
-      // Add an event listener to the button
-      button.addEventListener("click", () => displayPlaylistSongs(genre));
-
-      // Append elements to the div
-      playlistLabel.appendChild(button);
-      playlistDiv.appendChild(playlistLabel);
-
-      // Append the playlistDiv to the fragment
-      fragment.appendChild(playlistDiv);
-    });
-  });
-
-  // Append all playlist cards to the playlists container at once
-  playlistsDiv.appendChild(fragment);
-}
 
 /* DISPLAY musics */
 function displayPlaylistSongs(genre) {
     // Vérifier si la div pour le genre existe déjà
     let genreDiv = document.getElementById(genre);
+    titlePlaylist.innerHTML = `PLAYLIST ${genre.toUpperCase()}`;
     // Masquer toutes les autres divs de genre
     const allGenreDivs = document.querySelectorAll('div[id]');
     
@@ -392,7 +353,6 @@ function displayPlaylistSongs(genre) {
 
     // Continuez avec votre logique existante pour afficher les chansons
     const songs = musics[0][genre];
-    playlistsDiv.style.display = "block";
     playlistMusic.style.display = "block";
     musicLike.style.display = "none";
 
@@ -492,7 +452,6 @@ function displaySongs() {
     musicLike.style.display = "block"
     //METTre display block a musicLike
 
-    playlistsDiv.style.display = "none";
     playlistMusic.style.display = "none";
     musicLike.style.display = "block";
 
@@ -522,6 +481,11 @@ function displaySongs() {
       noSongsMessage.textContent = "Aucune musique dans vos favoris.";
       musicLike.appendChild(noSongsMessage);
     } else {
+        const title = document.createElement("h2");
+        title.classList.add("title");
+        title.textContent = "TITRES FAVORIS";
+        musicLike.appendChild(title);
+
       likedSongs.forEach((song) => {
         const musicCard = document.createElement("div");
         musicCard.classList.add("music-card");
