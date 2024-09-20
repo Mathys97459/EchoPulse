@@ -282,8 +282,9 @@ footer {
   .banner {
     height: 2.5em;
     padding-top: 25px;
-    padding-left: 110px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+    padding-right: 30px;
   }
 
   .banner-content {
@@ -291,6 +292,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    margin: 0;
   }
 
   .banner-content img {
@@ -302,7 +304,7 @@ footer {
   }
 
   .banner-content > :nth-child(2) {
-    margin-right: 1.5em;
+    margin-right: 0em;
   }
 
   .banner-content img {
@@ -350,6 +352,10 @@ button.banner-previous {
 }
 
 @media screen and (max-width: 720px) {
+  .sidebar .sidebar-header h2{
+    display: none;
+  }
+
   .banner-btn {
     display: flex;
     align-content: center;
@@ -387,7 +393,7 @@ svg#prev-btn {
 }
 
 .sidebar:hover {
-  width: 260px;
+  width: 130px;
 }
 
 .sidebar .sidebar-header {
