@@ -12,7 +12,7 @@ let musics;
 /* LOADING PAGE */
 document.addEventListener("DOMContentLoaded", () => {
   // Récupérer le fichier JSON et afficher les songs
-  fetch("../lib/musics.json")
+  fetch("https://mathys97459.github.io/EchoPulse/lib/musics.json")
     .then((response) => response.json())
     .then((data) => {
       musics = data.musics;
