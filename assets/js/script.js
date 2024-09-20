@@ -25,8 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function afficherBanniere(songs, song) {
-    console.log(songs);
-    console.log(song);
     const banner = document.querySelector(".music-banner-off") || document.querySelector(".music-banner-on");
     const img = document.getElementById("banner-img");
     const title = document.getElementById("banner-title");
@@ -106,7 +104,6 @@ function afficherBanniere(songs, song) {
     const btn = document.getElementById("play-" + id);
     const audio = document.getElementById(`audio-${id}`);
     const canvas = document.querySelectorAll(`.visualizer-${id}`);
-    console.log(canvas);
     // Mettre tous les autres sons en pause
     if (currentAudio && currentAudio !== audio) {
       currentAudio.pause();
@@ -300,12 +297,6 @@ function updateProgressBar(audio) {
             delete song.likeDate; // Supprimer la date de like si le morceau n'est plus liké
           }
   
-          console.log(
-            `La chanson ${song.title} est maintenant ${
-              song.like ? "likée" : "non likée"
-            }`
-          );
-  
           // Mettre à jour visuellement le bouton
           const favoriteButton = document.querySelector(
             `.music-${songId} .favorite-button`
@@ -348,7 +339,6 @@ function displayPlaylists() {
   musicLike.style.display = "none";
   playlistsDiv.style.display = "block";
   playlistMusic.style.display = "block";
-  console.log(songs);
   // Create a DocumentFragment to improve performance
   const fragment = document.createDocumentFragment();
 
@@ -391,12 +381,10 @@ function displayPlaylistSongs(genre) {
     const allGenreDivs = document.querySelectorAll('div[id]');
     
     allGenreDivs.forEach(div => {
-        console.log(div.id , playlistMusic.id)
         if (div !== genreDiv && div.id !== playlistMusic.id) {
             div.style.display = "none"; // Masquer les autres divs
         }
     });
-    console.log(allGenreDivs)
 
     // Afficher la div du genre sélectionné
 
@@ -409,13 +397,11 @@ function displayPlaylistSongs(genre) {
     if (songs.length === 0) {
         playlistMusic.innerHTML = "Aucune musique dans cette playlist.";
     } else{
-        console.log(songs);
         if (!genreDiv) {
             // Si elle n'existe pas, créez-la
             genreDiv = document.createElement("div");
             genreDiv.id = genre; // Attribuer l'id du genre
             document.body.appendChild(genreDiv); // Ajouter la div au corps du document
-            console.log(genreDiv);
             genreDiv.style.display = "block";
             songs.songs.forEach(song => {
                 // Logique pour afficher les chansons
@@ -471,7 +457,6 @@ function displayPlaylistSongs(genre) {
                     toggleFavorite(song.id);
                 });
                 musicCard.appendChild(favoriteButton);
-                console.log(musicCard);
                 genreDiv.appendChild(musicCard);
                 // Gérer la fin de l'audio
                 audio.addEventListener("ended", () => {
@@ -498,7 +483,6 @@ function displaySongs() {
   
   const allGenreDivs = document.querySelectorAll('div[id]');
     allGenreDivs.forEach(div => {
-        console.log(div.id , playlistMusic.id)
         if (div.id !== 'musicLike') {
             div.style.display = "none"; // Masquer les autres divs
         }
@@ -521,16 +505,11 @@ function displaySongs() {
         });
       });
     });
-    console.log(likedSongs);
-
-    console.log("Chansons likées avant tri :", likedSongs);
 
     // Trier les chansons likées par date de like
     likedSongs.sort((a, b) =>
       b.likeDate ? new Date(b.likeDate) - new Date(a.likeDate) : 0
     );
-
-    console.log("Chansons likées après tri :", likedSongs);
 
     // Effacer le contenu précédent
     musicLike.innerHTML = "";
@@ -604,13 +583,6 @@ function displaySongs() {
         });
       });
     
-  // } else {
-  //   playlistsDiv.style.display = "none";
-  //   playlistMusic.style.display = "none";
-  //   musicLike.style.display = "block";
-
-  //   console.log("musicLike est rempli")
-  // }
 }
 
 
