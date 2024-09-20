@@ -67,45 +67,69 @@ function displayPlaylists() {
 
 /* DISPLAY musics */
 function displayPlaylistSongs(genre) {
-    const songs = musics[0][genre]
-    if (musicLike.innerHTML == "") {
+    // Vérifier si la div pour le genre existe déjà
+    let genreDiv = document.getElementById(genre);
+    // Masquer toutes les autres divs de genre
+    const allGenreDivs = document.querySelectorAll('div[id]');
+    
+    allGenreDivs.forEach(div => {
+        console.log(div.id , playlistMusic.id)
+        if (div !== genreDiv && div.id !== playlistMusic.id) {
+            div.style.display = "none"; // Masquer les autres divs
+        }
+    });
+    console.log(allGenreDivs)
 
-    if (songs.length == 0) {
+    // Afficher la div du genre sélectionné
+
+    // Continuez avec votre logique existante pour afficher les chansons
+    const songs = musics[0][genre];
+    playlistsDiv.style.display = "block";
+    playlistMusic.style.display = "block";
+    musicLike.style.display = "none";
+
+    if (songs.length === 0) {
         playlistMusic.innerHTML = "Aucune musique dans cette playlist.";
-    }
-    else{
-        console.log(songs)
+    } else{
+        console.log(songs);
+        if (!genreDiv) {
+            // Si elle n'existe pas, créez-la
+            genreDiv = document.createElement("div");
+            genreDiv.id = genre; // Attribuer l'id du genre
+            document.body.appendChild(genreDiv); // Ajouter la div au corps du document
+            console.log(genreDiv);
+            genreDiv.style.display = "block";
             songs.songs.forEach(song => {
-                // Création de l'élément pour chaque carte de song
+                // Logique pour afficher les chansons
                 const musicCard = document.createElement("div");
                 musicCard.classList.add("music-card");
                 musicCard.classList.add("music-" + song.id);
     
-                // Ajout de l'image de l'album
+                // Image de l'album
                 const img = document.createElement("img");
                 img.src = song.pathImg;
                 img.alt = `Pochette de l'album ${song.album}`;
                 musicCard.appendChild(img);
     
-                // Ajout des informations de la song
+                // Détails de la chanson
                 const infoDiv = document.createElement("div");
                 infoDiv.classList.add("music-info");
                 infoDiv.innerHTML = `
-            <h3>${song.title}</h3>
-            <p>${song.author}</p>
-            `;
+                    <h3>${song.title}</h3>
+                    <p>${song.author}</p>
+                `;
                 musicCard.appendChild(infoDiv);
     
-                // Ajout de la frequence
-           const freqDiv = document.createElement("div");
-           freqDiv.classList.add("banner-stats");
-           freqDiv.innerHTML = `
-                         <div class="vizualisator">
-             <canvas class="visualizer-${song.id}"></canvas>
-           </div>`;
-           musicCard.appendChild(freqDiv);
-
-                // Ajout de l'audio
+                // Visualiseur de fréquence
+                const freqDiv = document.createElement("div");
+                freqDiv.classList.add("banner-stats");
+                freqDiv.innerHTML = `
+                    <div class="vizualisator">
+                        <canvas class="visualizer-${song.id}"></canvas>
+                    </div>`;
+                    musicCard.appendChild(freqDiv);
+    
+                // Élément audio
                 const audio = document.createElement("audio");
                 audio.id = `audio-${song.id}`;
                 audio.src = song.pathMp3;
@@ -113,30 +137,28 @@ function displayPlaylistSongs(genre) {
                 audio.style.display = "none"; // Cacher les éléments audio
                 musicCard.appendChild(audio);
     
-                playlistMusic.appendChild(musicCard);
-                // Ajouter l'événement de clic au bouton de lecture
+    
+                // Écouteur d'événements pour la carte de musique
                 musicCard.addEventListener("click", () => afficherBanniere(songs, song));
     
-                // Ajout du bouton favori
-      const favoriteButton = document.createElement("button");
-      favoriteButton.classList.add("favorite-button");
-      if (song.like) {
-        favoriteButton.classList.add("liked");
-      }
-      favoriteButton.innerHTML = `<span class="material-symbols-outlined">${
-        song.like ? "favorite" : "favorite_border"
-      }</span>`;
-      favoriteButton.addEventListener("click", (event) => {
-        event.stopPropagation();
-        toggleFavorite(song.id);
-      });
-      musicCard.appendChild(favoriteButton);
-
-                // Ajout de l'événement 'ended'
+                // Bouton Favori
+                const favoriteButton = document.createElement("button");
+                favoriteButton.classList.add("favorite-button");
+                if (song.like) {
+                    favoriteButton.classList.add("liked");
+                }
+                favoriteButton.innerHTML = `<span class="material-symbols-outlined">${song.like ? "favorite" : "favorite_border"}</span>`;
+                favoriteButton.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    toggleFavorite(song.id);
+                });
+                musicCard.appendChild(favoriteButton);
+                console.log(musicCard);
+                genreDiv.appendChild(musicCard);
+                // Gérer la fin de l'audio
                 audio.addEventListener("ended", () => {
                     const nextMusiqueId = parseInt(song.id) + 1;
                     const nextAudio = document.getElementById(`audio-${nextMusiqueId}`);
-                    // Vérifier si l'audio suivant existe
                     if (nextAudio) {
                         playState(nextMusiqueId);
                     } else {
@@ -144,17 +166,27 @@ function displayPlaylistSongs(genre) {
                     }
                 });
             });
-    }
-    }else{
-        playlistsDiv.style.display = "block";
-        playlistMusic.style.display = "block";
-        musicLike.style.display = "none";
+        }else{
+            genreDiv.style.display = 'block'
         }
-  }
+    }
+}
+
+
 
 /* DISPLAY musics */
 function displaySongs() {
   const playlists = musics;
+  
+  const allGenreDivs = document.querySelectorAll('div[id]');
+    allGenreDivs.forEach(div => {
+        console.log(div.id , playlistMusic.id)
+        if (div.id !== musicLike.id) {
+            div.style.display = "none"; // Masquer les autres divs
+        }
+    });
+
+
   if (musicLike.innerHTML === "") {
     playlistsDiv.style.display = "none";
     playlistMusic.style.display = "none";
@@ -376,7 +408,7 @@ function setActiveButton(buttonId) {
 function afficherBanniere(songs, song) {
   console.log(songs);
   console.log(song);
-  const banner = document.getElementById("musicBanner");
+  const banner = document.querySelector(".music-banner-off") || document.querySelector(".music-banner-on");
   const img = document.getElementById("banner-img");
   const title = document.getElementById("banner-title");
   const author = document.getElementById("banner-author");
