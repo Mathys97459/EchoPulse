@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((response) => response.json())
     .then((data) => {
       musics = data.musics;
-      console.log(musics)
       displayPlaylistSongs("rap");
     })
     .catch((error) =>
@@ -83,7 +82,6 @@ function afficherBanniere(songs, song) {
       playState(song.id);
     });
     btnNext.addEventListener("click", () => {
-      console.log(song);
       if (songs.songs[song.id + 1]) {
         afficherBanniere(songs, songs.songs[song.id + 1]);
       } else {
@@ -162,7 +160,6 @@ function afficherBanniere(songs, song) {
 
   // Fonction pour mettre à jour la barre de progression en fonction du temps de la chanson
 function updateProgressBar(audio) {
-    console.log(audio)
     const progressContainer = document.querySelector(".progress-container");
     const progressBar = document.querySelector(".progress-bar");
     const progressDot = document.querySelector(".progress-dot");
