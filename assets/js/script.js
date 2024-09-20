@@ -450,20 +450,96 @@ function afficherBanniere(songs, song) {
   playState(song.id);
 }
 
+// Fonction pour mettre à jour la barre de progression en fonction du temps de la chanson
 function updateProgressBar(audio) {
+  const progressContainer = document.querySelector(".progress-container");
   const progressBar = document.querySelector(".progress-bar");
   const progressDot = document.querySelector(".progress-dot");
 
-  if (audio.duration) {
-    const percentage = (audio.currentTime / audio.duration) * 100;
+  let isDragging = false;
 
-    // Mise à jour de la largeur de la barre de progression
-    progressBar.style.width = percentage + "%";
+  // Mise à jour de la barre et du dot pendant la lecture de l'audio
+  audio.addEventListener("timeupdate", function () {
+    if (!isDragging) {
+      // Ne pas mettre à jour pendant le drag
+      const duration = audio.duration || 0;
+      const currentTime = audio.currentTime || 0;
+      const progressPercent = (currentTime / duration) * 100;
 
-    // Mise à jour de la position du point sur la barre
-    progressDot.style.left = percentage + "%";
+      // Mettre à jour la largeur de la progress-bar
+      progressBar.style.width = `${progressPercent}%`;
+
+      // Mettre à jour la position du dot
+      const containerWidth = progressContainer.offsetWidth;
+      const dotPosition = (currentTime / duration) * containerWidth;
+      progressDot.style.left = `${dotPosition}px`;
+    }
+  });
+
+  // Gérer le clic direct sur la barre pour changer la position du son
+  progressContainer.addEventListener("click", function (event) {
+    const containerWidth = progressContainer.offsetWidth;
+    const clickX = event.offsetX;
+    const newTime = (clickX / containerWidth) * audio.duration;
+    audio.currentTime = newTime; // Mettre à jour la position de lecture
+  });
+
+  // Gérer le drag du dot
+  progressDot.addEventListener("mousedown", function () {
+    isDragging = true;
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+
+  function onMouseMove(event) {
+    const containerRect = progressContainer.getBoundingClientRect();
+    let x = event.clientX - containerRect.left; // Position relative au conteneur
+
+    // Limiter le déplacement du dot dans les bornes de la barre
+    x = Math.max(0, Math.min(x, progressContainer.offsetWidth));
+
+    // Mettre à jour visuellement pendant le drag
+    progressBar.style.width = `${(x / progressContainer.offsetWidth) * 100}%`;
+    progressDot.style.left = `${x}px`;
+  }
+
+  function onMouseUp(event) {
+    const containerRect = progressContainer.getBoundingClientRect();
+    let x = event.clientX - containerRect.left; // Position relative au conteneur
+
+    // Limiter le déplacement du dot dans les bornes de la barre
+    x = Math.max(0, Math.min(x, progressContainer.offsetWidth));
+
+    const newTime = (x / progressContainer.offsetWidth) * audio.duration;
+
+    // Éviter les cas où la durée serait NaN (lorsque l'audio n'est pas encore prêt)
+    if (!isNaN(newTime)) {
+      audio.currentTime = newTime; // Mettre à jour la position de lecture de l'audio
+    }
+
+    // Fin du drag
+    isDragging = false;
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseUp);
   }
 }
+
+// Exemple d'utilisation
+const audio = document.getElementById("audio");
+updateProgressBar(audio);
+
+// Rendre la barre de progression interactive
+document.getElementById("progress").addEventListener("input", function () {
+  const progress = document.getElementById("progress");
+  const audio = document.querySelector("audio"); // Récupère l'audio actuellement joué
+  const duration = audio.duration;
+
+  if (!isNaN(duration)) {
+    // Met à jour le temps courant de la chanson lorsque l'utilisateur bouge la barre
+    const newTime = (progress.value / 100) * duration;
+    audio.currentTime = newTime;
+  }
+});
 
 // Fonction pour visualiser les données
 function frequenciesVisualizer(canvas, analyser, dataArray, bufferLength) {
